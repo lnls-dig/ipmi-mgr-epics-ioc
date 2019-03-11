@@ -1,0 +1,244 @@
+record(mbbi, "$(dev):$(id):TYPE_RAW") {
+ field(DESC, "Device type")
+ field(DTYP, "MCHsensor")
+ field(SCAN, "I/O Intr")
+ field(INP, "#B0 C0 N0 @$(link)+mch")
+ field(ZRST, "Unknown")
+ field(ZRVL, "0")
+ field(ZRSV, "MAJOR")
+ field(ONST, "MicroTCA VadaTech")
+ field(ONVL, "1")
+ field(ONSV, "NO_ALARM")
+ field(TWST, "MicroTCA NAT")
+ field(TWVL, "2")
+ field(TWSV, "NO_ALARM")
+ field(THST, "Supermicro")
+ field(THVL, "3")
+ field(THSV, "NO_ALARM")
+ field(FRST, "ATCA Pentair")
+ field(FRVL, "4")
+ field(FRSV, "NO_ALARM")
+ field(FVVL, "5")
+ field(FVST, "ATCA Artesyn")
+ field(FVSV, "NO_ALARM")
+ field(SXVL, "6")
+ field(SXST, "Advantech")
+ field(SXSV, "NO_ALARM")
+ field(PINI, "YES")
+}
+
+# Control debug message verbosity
+record(mbbo, "$(dev):$(id):DBG") {
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(ZRVL, "0")
+ field(ZRST, "Off")
+ field(ONVL, "1")
+ field(ONST, "Low")
+ field(TWVL, "2")
+ field(TWST, "Med")
+ field(THVL, "3")
+ field(THST, "High")
+ field(OUT,  "#B0 C0 N0 @$(link)+dbg")
+ field(VAL,  "0")
+ field(PINI, "YES")
+}
+
+record(bi, "$(dev):$(id):ONLNSTAT") {
+ field(DESC, "MCH online status")
+ field(DTYP, "MCHsensor")
+ field(SCAN, "I/O Intr")
+ field(INP, "#B0 C0 N0 @$(link)+stat")
+ field(ZNAM, "Offline")
+ field(ZSV, "MAJOR")
+ field(ONAM, "Online")
+ field(OSV, "NO_ALARM")
+ field(PINI, "YES")
+}
+
+record(mbbi, "$(dev):$(id):INIT") {
+ field(DESC, "MCH comm initialized")
+ field(DTYP, "MCHsensor")
+ field(SCAN, "I/O Intr")
+ field(INP, "#B0 C0 N0 @$(link)+init")
+ field(ZRST, "Not initialized")
+ field(ZRVL, "0")
+ field(ZRSV, "MAJOR")
+ field(ONST, "Initializing...")
+ field(ONVL, "1")
+ field(ONSV, "MINOR")
+ field(TWST, "Initialized")
+ field(TWVL, "2")
+ field(TWSV, "NO_ALARM")
+ field(THST, "Initialize failed")
+ field(THVL, "3")
+ field(THSV, "MAJOR")
+ field(PINI, "YES")
+}
+
+record(bo, "$(dev):$(id):INITBYP") {
+ field(DESC, "Override init for testing")
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(OUT, "#B0 C0 N0 @$(link)+init")
+ field(ZNAM, "Not initialized")
+ field(ZSV, "MAJOR")
+ field(ONAM, "Initialized")
+ field(OSV, "NO_ALARM")
+ field(PINI, "NO")
+}
+
+record(bo, "$(dev):$(id):CONNECT") {
+ field(DESC, "Enable comm with MCH")
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(OUT,  "#B0 C0 N0 @$(link)+sess")
+ field(ZNAM, "Disconnect")
+ field(ZSV,  "MAJOR")
+ field(ONAM, "Connect")
+ field(OSV,  "NO_ALARM")
+ field(VAL, "1")
+ field(RVAL, "1")
+ field(PINI, "YES") 
+ info(autosaveFields,"VAL RVAL")
+}
+
+## Add power on, power off, hard-reset, and msg
+## PVs to be consistent with other SLAC systems       
+#record(bo, "$(dev):$(id):POWEROFF") {     
+#  field(DESC, "Power off system")            
+#  field(FLNK, "$(dev):$(id):POWEROFFSEQ")
+#  field(PINI, "NO")             
+#}                                               
+#
+#record(seq, "$(dev):$(id):POWEROFFSEQ") {
+#  field(SELM, "All")               
+#  field(DOL1, "1")                 
+#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(DOL2, "0")                 
+#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(DLY3, "5")                
+#  field(DOL3, "0")                
+#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#}                                   
+#
+#record(bo, "$(dev):$(id):POWERON") {
+#  field(DESC, "Power on system")            
+#  field(FLNK, "$(dev):$(id):POWERONSEQ")
+#  field(PINI, "NO")             
+#}                                 
+#
+#record(seq, "$(dev):$(id):POWERONSEQ") {
+#  field(SELM, "All")              
+#  field(DOL1, "2")                 
+#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(DOL2, "1")                
+#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(DLY3, "5")                
+#  field(DOL3, "0")                
+#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#}                                   
+#
+#record(bo, "$(dev):$(id):HARDRESET") {
+#  field(DESC, "Power cycle system")            
+#  field(FLNK, "$(dev):$(id):HARDRESETSEQ")
+#  field(PINI, "NO")
+#}                                   
+#
+#record(seq, "$(dev):$(id):HARDRESETSEQ") {
+#  field(SELM, "All")                
+#  field(DOL1, "3")                 
+#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(DOL2, "2")                  
+#  field(LNK2, "$(dev):$(id):POWERCTL PP") 
+#  field(DLY3, "5")                 
+#  field(DOL3, "0")                 
+#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#}                                   
+#
+#record(bo, "$(dev):$(id):SOFTSHUTDOWN") {     
+#  field(DESC, "Soft shutdown system")            
+#  field(FLNK, "$(dev):$(id):SOFTSHUTDOWNSEQ")
+#  field(PINI, "NO")             
+#}                                               
+#
+#record(seq, "$(dev):$(id):SOFTSHUTDOWNSEQ") {
+#  field(SELM, "All")               
+#  field(DOL1, "1")                 
+#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(DOL2, "5")                 
+#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(DLY3, "5")                
+#  field(DOL3, "0")                
+#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#}                                   
+#
+#record(mbbo, "$(dev):$(id):POWERMSG") {
+#  field(ZRVL, "0")               
+#  field(ONVL, "1")               
+#  field(TWVL, "2")               
+#  field(THVL, "3")               
+#  field(ONST, "TURNING_OFF")     
+#  field(TWST, "TURNING_ON")      
+#  field(THST, "RESETTING")       
+#  field(ZRSV, "NO_ALARM")        
+#  field(ONSV, "MINOR")           
+#  field(TWSV, "MINOR")           
+#  field(THSV, "MINOR")           
+#  field(VAL, "0")                
+#  field(PINI, "YES")             
+#}                                
+#
+## Sends 'Chassis Power' IPMI command
+## Vadatech MCH results are unreliable
+## NAT MCH does not implement this command
+## Dell Server and ATCA crates do seem to implement this
+#record(mbbo, "$(dev):$(id):POWERCTL") {
+# field(DTYP, "MCHsensor")
+# field(OMSL, "supervisory")
+# field(OUT, "#B0 C0 N0 @$(link)+chas")
+# field(ZRVL, "0")
+# field(ZRST, "Power off")
+# field(ONVL, "1")
+# field(ONST, "Power on")
+# field(THVL, "3")
+# field(THST, "Hard reset")
+## Soft shutdown required by PICMG 3.0
+## Tested in ATCA, but not MicroTCA
+# field(FVVL, "5")
+# field(FVST, "Soft shutdown")
+# field(VAL, "1")
+#}
+
+# Peform IPMI 'Cold Reset'
+record(bo, "$(dev):$(id):RESET") {
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(OUT, "#B0 C0 N0 @$(link)+reset")
+}
+
+# Control sensor scan period [seconds]
+# Default is 10 seconds
+# Added this because PAL systems had 
+# trouble at that rate
+# Must match SENSOR_SCAN_PERIODS array 
+# definition in devMch.c
+record(mbbo, "$(dev):$(id):SENSOR_SCAN_PERIOD") {
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(ZRVL, "0")
+ field(ZRST, "5 seconds")
+ field(ONVL, "1")
+ field(ONST, "10 seconds")
+ field(TWVL, "2")
+ field(TWST, "20 seconds")
+ field(THVL, "3")
+ field(THST, "30 seconds")
+ field(FRVL, "4")
+ field(FRST, "60 seconds")
+ field(OUT,  "#B0 C0 N0 @$(link)+scan")
+ field(VAL,  "1")
+ field(RVAL, "1")
+ field(PINI, "YES")
+ info(autosaveFields,"VAL RVAL")
+}
