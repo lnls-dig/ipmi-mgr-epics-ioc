@@ -1,4 +1,4 @@
-#!../../bin/linux-x86_64/IpmiMgr
+#!../../bin/linux-x86_64/ipmiMgr
 
 ## You may have to change IpmiMgr to something else
 ## everywhere it appears in this file
@@ -11,8 +11,8 @@ epicsEnvSet("DEV", "CRATE")
 epicsEnvSet("MCH_LINK", "mch-test")
 
 ## Register all support components
-dbLoadDatabase "dbd/IpmiMgr.dbd"
-IpmiMgr_registerRecordDeviceDriver pdbbase
+dbLoadDatabase "dbd/ipmiMgr.dbd"
+ipmiMgr_registerRecordDeviceDriver pdbbase
 
 ## Initialize connection to MCH
 drvAsynIPPortConfigure ("$(MCH_LINK)","10.2.128.33:623 udp",0,0,0)
