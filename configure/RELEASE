@@ -23,11 +23,9 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-#MODULES = /path/to/modules
-#MYMODULE = $(MODULES)/my-module
-
-# If using the sequencer, point SNCSEQ at its top directory:
-#SNCSEQ = $(MODULES)/seq-ver
+ASYN=/opt/epics/synApps-lnls-R1-0-0/support/asyn-R4-33
+IOCSTATS=/opt/epics/synApps-lnls-R1-0-0/support/iocStats-3-1-15
+IPMICOMM=/ipmiComm
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
 EPICS_BASE = /opt/epics/base
