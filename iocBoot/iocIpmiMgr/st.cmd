@@ -7,12 +7,19 @@
 
 cd "${TOP}"
 
+epicsEnvSet("DEV", "CRATE")
+epicsEnvSet("MCH_LINK", "mch-test")
+
 ## Register all support components
 dbLoadDatabase "dbd/IpmiMgr.dbd"
 IpmiMgr_registerRecordDeviceDriver pdbbase
 
+## Initialize connection to MCH
+drvAsynIPPortConfigure ("$(MCH_LINK)","10.2.128.33:623 udp",0,0,0)
+mchInit("$(MCH_LINK)")
+
 ## Load record instances
-#dbLoadRecords("db/xxx.db","user=rootHost")
+dbLoadRecords("db/microtca_bpm_crate.db", "link=$(MCH_LINK),dev=$(DEV)")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
