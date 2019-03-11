@@ -1,0 +1,29 @@
+#
+# RTM AFC Timing
+#
+
+#nat> show_sensorinfo 90
+#Sensor Information for FRU 90 / RTM1
+#==================================================================
+#  #   SDRType  Sensor Entity Inst  Value   State    Name
+#------------------------------------------------------------------
+#  -   MDevLoc          0xc0  0x67                    AFC Timing-RTM
+# 20   Compact  0xf2    0xc0  0x67  0xa1              HOTSWAP RTM
+# 21   Full     Temp    0xc0  0x67  30.0 C     ok     TEMP RTM1
+# 22   Full     Temp    0xc0  0x67  29.5 C     ok     TEMP RTM2
+# 23   Compact  0xf0    0xc0  0x61  0x02              HS 090 RTM1
+# ------------------------------------------------------------------
+
+file "fru_common.db"
+{
+   pattern { id		, unit  	, fruid 	}
+           { RTM	, $(unit)	, $(fruid)	}
+}
+
+file "sensor_ai.db"
+{
+    pattern { attr       	, sensinst	, type	, prefix     }
+            { TempTop      	, 1		, 1	, RTM$(unit):}
+            { TempBottom      	, 2		, 1	, RTM$(unit):}
+
+}

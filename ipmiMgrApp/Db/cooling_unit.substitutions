@@ -1,0 +1,54 @@
+#
+# Cooling Unit : Schroff uTCA CU for 9U MTCA Crate
+#
+# Sensor Information for FRU 41 / CU2
+# ==================================================================
+#   #   SDRType  Sensor Entity Inst  Value   State    Name
+# ------------------------------------------------------------------
+#   -   MDevLoc          0x1e  0x62                    Schroff uTCA CU
+#   0   Full     0xf2    0x1e  0x62  0x01              Hot Swap
+#   1   Full     0xf1    0x1e  0x62  0x88 0xc0 0x08   IPMB Physical
+#   2   Full     Voltage 0x1e  0x62  3.1857 V   ok     +3.3V
+#   3   Full     Voltage 0x1e  0x62  12.428 V   ok     +12V
+#   4   Full     Voltage 0x1e  0x62  12.428 V   ok     +12V_1
+#   5   Full     Temp    0x1e  0x62  34.00 C    ok     LM75 Temp
+#   6   Full     Temp    0x1e  0x62  34.00 C    ok     LM75 Temp2
+#   7   Full     Fan     0x1e  0x62  3000 RPM   ok     Fan 1
+#   8   Full     Fan     0x1e  0x62  3000 RPM   ok     Fan 2
+#   9   Full     Fan     0x1e  0x62  3000 RPM   ok     Fan 3
+#  10   Full     Fan     0x1e  0x62  1980 RPM   ok     Fan 4
+#  11   Full     Fan     0x1e  0x62  1920 RPM   ok     Fan 5
+#  12   Full     Fan     0x1e  0x62  1920 RPM   ok     Fan 6
+#  13   Full     0xc0    0x1e  0x62  0x00              0x02  Air Filter
+#  14   Compact  0xf0    0x1e  0x62  0x10              HS 041 CU2
+# ------------------------------------------------------------------
+
+#global {dev=$(dev), id=CU, unit=$(unit), fruid=$(fruid), prefix=$(id)$(unit)}
+
+file "fru_cu_common.db"
+{
+   pattern { id		, unit  	}
+           { CU 	, $(unit)	}
+}
+
+file "fru_common.db"
+{
+   pattern { id		, fruid 	}
+           { CU 	, $(fruid)	}
+}
+
+file "sensor_ai.db"
+{
+   pattern { attr	, sensinst	, type	, prefix}
+           { LM75TEMP1_	, 1		, 1	, CU$(unit):}
+           { LM75TEMP2_	, 2		, 1	, CU$(unit):}
+           { 3d3V_	, 1		, 2	, CU$(unit):}
+           { 12V_	, 2		, 2	, CU$(unit):}
+           { 12V_	, 3		, 2	, CU$(unit):}
+    	   { FAN1_	, 1		, 4	, CU$(unit):}
+           { FAN2_	, 2		, 4	, CU$(unit):}
+           { FAN3_	, 3		, 4	, CU$(unit):}
+           { FAN4_	, 4		, 4	, CU$(unit):}
+           { FAN5_	, 5		, 4	, CU$(unit):}
+           { FAN6_	, 6		, 4	, CU$(unit):}
+}

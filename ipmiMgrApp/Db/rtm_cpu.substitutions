@@ -1,0 +1,50 @@
+#
+# RTM NAT CPU - ComEx
+#
+
+# nat> show_sensorinfo 64
+# Sensor Information for FRU 64 / RTM1
+# ==================================================================
+#   #   SDRType  Sensor Entity Inst  Value   State    Name
+# ------------------------------------------------------------------
+#   -   MDevLoc          0xc2  0x67                    MCH-RTM-ComEx
+#   1   Full     Temp    0xc2  0x67  33 C       ok     Temp PCB
+#   2   Full     Temp    0xc2  0x67  36 C       ok     Temp PCB max
+#   3   Full     Temp    0xc2  0x67  27 C       ok     Temp DC/DC
+#   4   Full     Temp    0xc2  0x67  31 C       ok     Temp DC/DC max
+#   5   Full     Temp    0xc2  0x67  30 C       ok     T ComEx CPU
+#   6   Full     Temp    0xc2  0x67  29 C       ok     T ComEx PCH
+#   7   Full     Temp    0xc2  0x67  27 C       ok     T ComEx DDR
+#   8   Full     Voltage 0xc2  0x67  0.97 V     ok     1.0V
+#   9   Full     Voltage 0xc2  0x67  1.78 V     ok     1.8V
+#  10   Full     Voltage 0xc2  0x67  3.360 V    ok     3.3V
+#  11   Full     Voltage 0xc2  0x67  5.040 V    ok     5V
+#  12   Full     Voltage 0xc2  0x67  3.120 V    ok     V_BAT
+#  13   Full     Voltage 0xc2  0x67  12.240 V   ok     12V int
+#  14   Compact  0xf2    0xc2  0x67  0x01              HotSwap
+# ------------------------------------------------------------------
+
+#global {dev=$(dev), id=RTM_CPU, unit=$(unit), fruid=$(fruid), prefix=$(id)$(unit)}
+
+file "fru_common.db"
+{
+    pattern {} {}
+}
+
+file "sensor_ai.db"
+{
+    pattern { attr      	, sensinst	, type	}
+            { PcbTemp_	        , 1		, 1	}
+            { PcbMaxTemp_	, 2		, 1	}
+            { DcDcTemp_	        , 3		, 1	}
+            { DcDcMaxTemp_	, 4		, 1	}
+            { ComExCpuTemp_	, 5		, 1	}
+            { ComExPchTemp_	, 6		, 1	}
+            { ComExDdrTemp_	, 7		, 1	}
+            { 1V0_	        , 1		, 2	}
+            { 1V8_	        , 2		, 2	}
+            { 3V3_	        , 3		, 2	}
+            { 5V_	        , 4		, 2	}
+            { VBAT_	        , 5		, 2	}
+	    { Int12V_	        , 6		, 2	}
+}

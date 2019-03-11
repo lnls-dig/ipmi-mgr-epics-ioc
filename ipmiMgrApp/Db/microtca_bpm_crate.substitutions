@@ -1,0 +1,66 @@
+#
+# Sirius 9U 12 slot Standard BPM MTCA Crate Configuration
+#
+# * Schroff 12 U
+# * 1 NAT MCH
+# * 2 WIENER PS
+# * 1 RTM CPU
+# * 1 AFC Timing (AMC1, FRUID 5)
+# * Up to 11 AFC BPM (AMC2-12, FRUID 6-16)
+#
+
+file "system_common.db"
+{
+   pattern { id } { MCH }
+}
+
+file "power_module.db"
+{
+   pattern { unit	, fruid }
+           { 1_  	, 51	}
+           { 2_  	, 53	}
+}
+
+file "mch_nat.db"
+{
+   pattern { unit }
+           { 1_   }
+}
+
+file "cooling_unit.db"
+{
+   pattern { unit	, fruid }
+           { 1_  	, 40	}
+           { 2_  	, 41	}
+}
+
+file "rtm_cpu.db"
+{
+   pattern { unit	, fruid }
+           { 1_  	, 64	}
+}
+
+file "afc.db"
+{
+   pattern { unit	, fruid }
+           { 1  	, 5	}
+           { 2  	, 6	}
+           { 3  	, 7	}
+           { 4  	, 8	}
+           { 5  	, 9	}
+           { 6  	, 10	}
+           { 7  	, 11	}
+           { 8  	, 12	}
+           { 9  	, 13	}
+           { 10  	, 14	}
+           { 11  	, 15	}
+           { 12  	, 16	}
+}
+
+file "rtm_timing.db"
+{
+   pattern { unit	, fruid }
+           { 1  	, 90	}
+}
+
+
