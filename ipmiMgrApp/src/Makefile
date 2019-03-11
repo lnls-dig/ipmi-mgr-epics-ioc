@@ -14,12 +14,15 @@ DBD += ipmiMgr.dbd
 
 # ipmiMgr.dbd will be made up from these files:
 ipmiMgr_DBD += base.dbd
-
-# Include dbd files from all support applications:
-#ipmiMgr_DBD += xxx.dbd
+ipmiMgr_DBD += asyn.dbd
+ipmiMgr_DBD += drvAsynIPPort.dbd
+ipmiMgr_DBD += iocAdmin.dbd
+ipmiMgr_DBD += ipmiComm.dbd
 
 # Add all the support libraries needed by this IOC
-#ipmiMgr_LIBS += xxx
+ipmiMgr_LIBS += asyn
+ipmiMgr_LIBS += devIocStats
+ipmiMgr_LIBS += ipmiComm
 
 # ipmiMgr_registerRecordDeviceDriver.cpp derives from ipmiMgr.dbd
 ipmiMgr_SRCS += ipmiMgr_registerRecordDeviceDriver.cpp
