@@ -24,27 +24,26 @@
 #  14   Compact  0xf2    0xc2  0x67  0x01              HotSwap
 # ------------------------------------------------------------------
 
-#global {dev=$(dev), id=RTM_CPU, unit=$(unit), fruid=$(fruid), prefix=$(id)$(unit)}
-
 file "fru_common.db"
 {
-    pattern {} {}
+   pattern { id		, fruid 	}
+           { $(id)	, $(fruid)	}
 }
 
 file "sensor_ai.db"
 {
-    pattern { attr      	, sensinst	, type	}
-            { PcbTemp_	        , 1		, 1	}
-            { PcbMaxTemp_	, 2		, 1	}
-            { DcDcTemp_	        , 3		, 1	}
-            { DcDcMaxTemp_	, 4		, 1	}
-            { ComExCpuTemp_	, 5		, 1	}
-            { ComExPchTemp_	, 6		, 1	}
-            { ComExDdrTemp_	, 7		, 1	}
-            { 1V0_	        , 1		, 2	}
-            { 1V8_	        , 2		, 2	}
-            { 3V3_	        , 3		, 2	}
-            { 5V_	        , 4		, 2	}
-            { VBAT_	        , 5		, 2	}
-	    { Int12V_	        , 6		, 2	}
+    pattern { attr       	, sensinst	, type	, fruid		, prefix }
+            { PcbTemp	        , 1		, 1	, $(fruid)      , $(id)  }
+            { PcbMaxTemp	, 2		, 1	, $(fruid)      , $(id)  }
+            { DcDcTemp	        , 3		, 1	, $(fruid)      , $(id)  }
+            { DcDcMaxTemp	, 4		, 1	, $(fruid)      , $(id)  }
+            { ComExCpuTemp	, 5		, 1	, $(fruid)      , $(id)  }
+            { ComExPchTemp	, 6		, 1	, $(fruid)      , $(id)  }
+            { ComExDdrTemp	, 7		, 1	, $(fruid)      , $(id)  }
+            { 1V0	        , 1		, 2	, $(fruid)      , $(id)  }
+            { 1V8	        , 2		, 2	, $(fruid)      , $(id)  }
+            { 3V3	        , 3		, 2	, $(fruid)      , $(id)  }
+            { 5V	        , 4		, 2	, $(fruid)      , $(id)  }
+            { VBAT	        , 5		, 2	, $(fruid)      , $(id)  }
+	    { Int12V	        , 6		, 2	, $(fruid)      , $(id)  }
 }

@@ -23,32 +23,30 @@
 #  14   Compact  0xf0    0x1e  0x62  0x10              HS 041 CU2
 # ------------------------------------------------------------------
 
-#global {dev=$(dev), id=CU, unit=$(unit), fruid=$(fruid), prefix=$(id)$(unit)}
-
 file "fru_cu_common.db"
 {
-   pattern { id		, unit  	}
-           { CU 	, $(unit)	}
+   pattern { id		, fruid 	}
+           { $(id)	, $(fruid)	}
 }
 
 file "fru_common.db"
 {
    pattern { id		, fruid 	}
-           { CU 	, $(fruid)	}
+           { $(id)	, $(fruid)	}
 }
 
 file "sensor_ai.db"
 {
-   pattern { attr	, sensinst	, type	, prefix}
-           { LM75TEMP1_	, 1		, 1	, CU$(unit):}
-           { LM75TEMP2_	, 2		, 1	, CU$(unit):}
-           { 3d3V_	, 1		, 2	, CU$(unit):}
-           { 12V_	, 2		, 2	, CU$(unit):}
-           { 12V_	, 3		, 2	, CU$(unit):}
-    	   { FAN1_	, 1		, 4	, CU$(unit):}
-           { FAN2_	, 2		, 4	, CU$(unit):}
-           { FAN3_	, 3		, 4	, CU$(unit):}
-           { FAN4_	, 4		, 4	, CU$(unit):}
-           { FAN5_	, 5		, 4	, CU$(unit):}
-           { FAN6_	, 6		, 4	, CU$(unit):}
+    pattern { attr	, sensinst	, type	, fruid		, prefix }
+            { LM75Temp1	, 1		, 1	, $(fruid)      , $(id)  }
+            { LM75Temp2	, 2		, 1	, $(fruid)      , $(id)  }
+            { 3V3	, 1		, 2	, $(fruid)      , $(id)  }
+            { 12V	, 2		, 2	, $(fruid)      , $(id)  }
+            { 12V	, 3		, 2	, $(fruid)      , $(id)  }
+            { Fan1	, 1		, 4	, $(fruid)      , $(id)  }
+            { Fan2	, 2		, 4	, $(fruid)      , $(id)  }
+            { Fan3	, 3		, 4	, $(fruid)      , $(id)  }
+            { Fan4	, 4		, 4	, $(fruid)      , $(id)  }
+            { Fan5	, 5		, 4	, $(fruid)      , $(id)  }
+            { Fan6	, 6		, 4	, $(fruid)      , $(id)  }
 }

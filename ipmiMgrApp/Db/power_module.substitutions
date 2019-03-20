@@ -41,40 +41,39 @@
 #  28   Compact  0xf0    0x0a  0x62  0x10              HS 051 PM2
 # ------------------------------------------------------------------
 
-#global {dev=$(dev), id=PM, unit=$(unit), fruid=$(fruid), prefix=$(id)$(unit)}
-
 file "fru_common.db"
 {
-pattern {} {}
+   pattern { id		, fruid 	}
+           { $(id)	, $(fruid)	}
 }
 
 file "sensor_ai.db"
 {
-   pattern { attr	, sensinst	, type	}
-           { CPU0TEMP_	, 1		, 1	}
-           { PATHTEMP_	, 2		, 1	}
-           { COOLTEMP_	, 3		, 1	}
-           { TRAFTEMP_	, 4		, 1	}
-           { MP00V_	, 1		, 2	}
-           { SMP0V_	, 2		, 2	}
-           { SMPPV_	, 3		, 2	}
-           { PP00V_	, 4		, 2	}
-           { 12HHV_	, 5		, 2	}
-           { SUM0I_	, 1		, 3	}
-           { CH01I_	, 2		, 3	}
-           { CH02I_	, 3		, 3	}
-           { CH03I_	, 4		, 3	}
-           { CH04I_	, 5		, 3	}
-           { CH05I_	, 6		, 3	}
-           { CH06I_	, 7		, 3	}
-           { CH07I_	, 8		, 3	}
-           { CH08I_	, 9		, 3	}
-           { CH09I_	, 10		, 3	}
-	   { CH10I_	, 11		, 3	}
-           { CH11I_	, 12		, 3	}
-           { CH12I_	, 13		, 3	}
-           { CH13I_	, 14		, 3	}
-           { CH14I_	, 15		, 3	}
-           { CH15I_	, 16		, 3	}
-           { CH16I_	, 17		, 3	}
+    pattern { attr	, sensinst	, type	, fruid		, prefix }
+            { Cpu0Temp	, 1		, 1	, $(fruid)	, $(id)  }
+            { PathTemp	, 2		, 1	, $(fruid)	, $(id)  }
+            { CoolTemp	, 3		, 1	, $(fruid)	, $(id)  }
+            { TrafTemp	, 4		, 1	, $(fruid)	, $(id)  }
+            { MP00V	, 1		, 2	, $(fruid)	, $(id)  }
+            { SMP0V	, 2		, 2	, $(fruid)	, $(id)  }
+            { SMPPV	, 3		, 2	, $(fruid)	, $(id)  }
+            { PP00V	, 4		, 2	, $(fruid)	, $(id)  }
+            { 12HHV	, 5		, 2	, $(fruid)	, $(id)  }
+            { SUM0Curr	, 1		, 3	, $(fruid)	, $(id)  }
+            { Ch01Curr	, 2		, 3	, $(fruid)	, $(id)  }
+            { Ch02Curr	, 3		, 3	, $(fruid)	, $(id)  }
+            { Ch03Curr	, 4		, 3	, $(fruid)	, $(id)  }
+            { Ch04Curr	, 5		, 3	, $(fruid)	, $(id)  }
+            { Ch05Curr	, 6		, 3	, $(fruid)	, $(id)  }
+            { Ch06Curr	, 7		, 3	, $(fruid)	, $(id)  }
+            { Ch07Curr	, 8		, 3	, $(fruid)	, $(id)  }
+            { Ch08Curr	, 9		, 3	, $(fruid)	, $(id)  }
+            { Ch09Curr	, 10		, 3	, $(fruid)	, $(id)  }
+            { Ch10Curr	, 11		, 3	, $(fruid)	, $(id)  }
+            { Ch11Curr	, 12		, 3	, $(fruid)	, $(id)  }
+            { Ch12Curr	, 13		, 3	, $(fruid)	, $(id)  }
+            { Ch13Curr	, 14		, 3	, $(fruid)	, $(id)  }
+            { Ch14Curr	, 15		, 3	, $(fruid)	, $(id)  }
+            { Ch15Curr	, 16		, 3	, $(fruid)	, $(id)  }
+            { Ch16Curr	, 17		, 3	, $(fruid)	, $(id)  }
  }

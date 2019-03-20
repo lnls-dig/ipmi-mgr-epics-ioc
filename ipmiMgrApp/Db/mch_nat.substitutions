@@ -24,33 +24,6 @@
 # 60   Clock1    M4    MCH-Clock
 # 61   HubMod1   M4    MCH-PCIe
 
-# nat> show_sensorinfo 0
-# Sensor Information for NMCH-CM
-# ==================================================================
-#   #   SDRType  Sensor Entity Inst  Value   State    Name
-# ------------------------------------------------------------------
-#   -   MDevLoc          0xc2  0x66                    NMCH-CM
-#   0   Compact  0xf0    0xc2  0x66  0x10              HS 000 CM
-# ------------------------------------------------------------------
-# nat> show_sensorinfo 3
-# Sensor Information for FRU 3 / MCMC1
-# ==================================================================
-#   #   SDRType  Sensor Entity Inst  Value   State    Name
-# ------------------------------------------------------------------
-#   -   MDevLoc          0xc2  0x61                    NAT-MCH-MCMC
-#   1   Full     Temp    0xc2  0x61  36 C       ok     Temp CPU
-#   2   Full     Temp    0xc2  0x61  32 C       ok     Temp I/O
-#   3   Compact  0xf2    0xc2  0x61  0x01              HotSwap
-#   4   Compact  0x2b    0xc2  0x61  0x00              Version Change
-#   5   Full     Voltage 0xc2  0x61  1.20 V     ok     Base 1.2V
-#   6   Full     Voltage 0xc2  0x61  1.51 V     ok     Base 1.5V
-#   7   Full     Voltage 0xc2  0x61  1.81 V     ok     Base 1.8V
-#   8   Full     Voltage 0xc2  0x61  2.45 V     ok     Base 2.5V
-#   9   Full     Voltage 0xc2  0x61  3.360 V    ok     Base 3.3V
-#  10   Full     Voltage 0xc2  0x61  12.30 V    ok     Base 12V
-#  11   Full     Current 0xc2  0x61  1.51 A     ok     Base Current
-#  12   Compact  0xf0    0xc2  0x61  0x10              HS 003 MCMC1
-# ------------------------------------------------------------------
 # nat> show_sensorinfo 60
 # Sensor Information for FRU 60 / CLK1
 # ==================================================================
@@ -83,44 +56,20 @@
 #  11   Full     Voltage 0xc2  0x64  12.30 V    ok     12V
 # ------------------------------------------------------------------
 
-#global {dev=$(dev), unit=$(unit)}
-
-file "fru_common.db"
+file "mch_base.db"
 {
    pattern { id		, fruid	}
-           { MCHCM	, 0	}
-      	   { MCH	, 3	}
-	   { CLK        , 60    }
-	   { HUB	, 61	}
+           { $(id)Base	, 3	}
 }
 
-file "sensor_ai.db"
+file "mch_clk_switch.db"
 {
-   pattern { id	    ,  fruid,  attr	, sensinst , type , prefix	 }
-   	   { MCH    ,  3    ,  CPUTEMP_	, 1	   , 1	  , $(id)$(unit) }
-           { MCH    ,  3    ,  IOTEMP_ 	, 2	   , 1	  , $(id)$(unit) }
-	   { MCH    ,  3    ,  BA1d2V_ 	, 1	   , 2	  , $(id)$(unit) }
-   	   { MCH    ,  3    ,  BA1d5V_ 	, 2	   , 2	  , $(id)$(unit) }
-	   { MCH    ,  3    ,  BA1d8V_ 	, 3	   , 2	  , $(id)$(unit) }
-   	   { MCH    ,  3    ,  BA2d5V_ 	, 4	   , 2	  , $(id)$(unit) }
-	   { MCH    ,  3    ,  BA3d3V_ 	, 5	   , 2	  , $(id)$(unit) }
-   	   { MCH    ,  3    ,  BA12V_  	, 6	   , 2	  , $(id)$(unit) }
-	   { MCH    ,  3    ,  BASEI_  	, 1	   , 3	  , $(id)$(unit) }
-     	   { CLK    , 60    ,  DTEMP_	, 1	   , 1	  , $(id)$(unit) }
-     	   { CLK    , 60    ,  DMAXTEMP_, 2	   , 1	  , $(id)$(unit) }
-    	   { CLK    , 60    ,  MTEMP_	, 3	   , 1	  , $(id)$(unit) }
-     	   { CLK    , 60    ,  MMAXTEMP_, 4	   , 1	  , $(id)$(unit) }
-	   { CLK    , 60    ,  3d3V_ 	, 1	   , 2	  , $(id)$(unit) }
-   	   { CLK    , 60    ,  12V_ 	, 2	   , 2	  , $(id)$(unit) }
-       	   { HUB    , 61    ,  DTEMP_	, 1	   , 1	  , $(id)$(unit) }
-     	   { HUB    , 61    ,  DMAXTEMP_, 2	   , 1	  , $(id)$(unit) }
-    	   { HUB    , 61    ,  STEMP_	, 3	   , 1	  , $(id)$(unit) }
-     	   { HUB    , 61    ,  SMAXTEMP_, 4	   , 1	  , $(id)$(unit) }
-    	   { HUB    , 61    ,  PTEMP_	, 5	   , 1	  , $(id)$(unit) }
-     	   { HUB    , 61    ,  PMAXTEMP_, 6	   , 1	  , $(id)$(unit) }
-	   { HUB    , 61    ,  d9V_ 	, 1	   , 2	  , $(id)$(unit) }
-   	   { HUB    , 61    ,  d9AnaV_	, 2	   , 2	  , $(id)$(unit) }
-	   { HUB    , 61    ,  1d8V_ 	, 3	   , 2	  , $(id)$(unit) }
-   	   { HUB    , 61    ,  3d3V_ 	, 4	   , 2	  , $(id)$(unit) }
-	   { HUB    , 61    ,  12V_ 	, 5	   , 2	  , $(id)$(unit) }
+   pattern { id			, fruid	}
+           { $(id)ClkSwitch	, 60	}
+}
+
+file "mch_base.db"
+{
+   pattern { id			, fruid	}
+           { $(id)PciHub	, 61	}
 }

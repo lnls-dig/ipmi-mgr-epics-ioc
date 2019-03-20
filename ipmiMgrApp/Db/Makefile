@@ -23,7 +23,11 @@ DB += fru_basic.db
 DB += fru_extended.db
 DB += power_module.db
 DB += rtm_cpu.db
+DB += mch_base.db
+DB += mch_clk_switch.db
+DB += mch_pci_hub.db
 DB += mch_nat.db
+DB += shelf.db
 DB += afc.db
 DB += rtm_timing.db
 

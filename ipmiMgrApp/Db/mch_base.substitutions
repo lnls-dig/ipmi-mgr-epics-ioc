@@ -1,0 +1,40 @@
+# nat> show_sensorinfo 3
+# Sensor Information for FRU 3 / MCMC1
+# ==================================================================
+#   #   SDRType  Sensor Entity Inst  Value   State    Name
+# ------------------------------------------------------------------
+#   -   MDevLoc          0xc2  0x61                    NAT-MCH-MCMC
+#   1   Full     Temp    0xc2  0x61  36 C       ok     Temp CPU
+#   2   Full     Temp    0xc2  0x61  32 C       ok     Temp I/O
+#   3   Compact  0xf2    0xc2  0x61  0x01              HotSwap
+#   4   Compact  0x2b    0xc2  0x61  0x00              Version Change
+#   5   Full     Voltage 0xc2  0x61  1.20 V     ok     Base 1.2V
+#   6   Full     Voltage 0xc2  0x61  1.51 V     ok     Base 1.5V
+#   7   Full     Voltage 0xc2  0x61  1.81 V     ok     Base 1.8V
+#   8   Full     Voltage 0xc2  0x61  2.45 V     ok     Base 2.5V
+#   9   Full     Voltage 0xc2  0x61  3.360 V    ok     Base 3.3V
+#  10   Full     Voltage 0xc2  0x61  12.30 V    ok     Base 12V
+#  11   Full     Current 0xc2  0x61  1.51 A     ok     Base Current
+#  12   Compact  0xf0    0xc2  0x61  0x10              HS 003 MCMC1
+# ------------------------------------------------------------------
+
+
+file "fru_common.db"
+{
+   pattern { id		, fruid		}
+      	   { $(id)	, $(fruid)	}
+}
+
+file "sensor_ai.db"
+{
+   pattern { attr	, sensinst , type , fruid	, prefix }
+   	   { CPUTemp	, 1	   , 1	  , $(fruid)	, $(id)  }
+           { IOTemp	, 2	   , 1	  , $(fruid)	, $(id)  }
+	   { BA1d2V	, 1	   , 2	  , $(fruid)	, $(id)  }
+   	   { BA1d5V	, 2	   , 2	  , $(fruid)	, $(id)  }
+	   { BA1d8V	, 3	   , 2	  , $(fruid)	, $(id)  }
+   	   { BA2d5V	, 4	   , 2	  , $(fruid)	, $(id)  }
+	   { BA3d3V	, 5	   , 2	  , $(fruid)	, $(id)  }
+   	   { BA12V	, 6	   , 2	  , $(fruid)	, $(id)  }
+	   { Current	, 1	   , 3	  , $(fruid)	, $(id)  }
+}

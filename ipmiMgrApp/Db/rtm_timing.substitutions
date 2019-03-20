@@ -16,14 +16,13 @@
 
 file "fru_common.db"
 {
-   pattern { id		, unit  	, fruid 	}
-           { RTM	, $(unit)	, $(fruid)	}
+   pattern { id		, fruid 	}
+           { $(id)	, $(fruid)	}
 }
 
 file "sensor_ai.db"
 {
-    pattern { attr       	, sensinst	, type	, prefix     }
-            { TempTop      	, 1		, 1	, RTM$(unit):}
-            { TempBottom      	, 2		, 1	, RTM$(unit):}
-
+    pattern { attr		, sensinst	, type	, fruid		, prefix }
+            { TempTop		, 1		, 1	, $(fruid)	, $(id)  }
+            { TempBottom	, 2		, 1	, $(fruid)	, $(id)  }
 }
