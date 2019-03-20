@@ -22,9 +22,9 @@ file "system_common.db"
 
 file "power_module.db"
 {
-    pattern { id		, fruid }
-            { PowerModule1  	, 51	}
-            { PowerModule2  	, 53	}
+    pattern { id	, fruid }
+            { PM1  	, 51	}
+            { PM2  	, 53	}
 }
 
 file "mch_nat.db"
@@ -35,9 +35,9 @@ file "mch_nat.db"
 
 file "cooling_unit.db"
 {
-    pattern { id		, fruid }
-            { CoolingUnitTop	, 40	}
-            { CoolingUnitBottom	, 41	}
+    pattern { id	, fruid }
+            { CUTop	, 40	}
+            { CUBot	, 41	}
 }
 
 file "rtm_cpu.db"
@@ -66,5 +66,5 @@ file "afc.db"
 file "rtm_timing.db"
 {
     pattern { id	, fruid }
-            { RTMTiming	, 90	}
+            { RTMTim	, 90	}
 }
