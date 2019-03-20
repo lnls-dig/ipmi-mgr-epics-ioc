@@ -1,4 +1,4 @@
-record(mbbi, "$(dev):$(id):TYPE_RAW") {
+record(mbbi, "$(P)$(R)$(id)MCHType") {
  field(DESC, "Device type")
  field(DTYP, "MCHsensor")
  field(SCAN, "I/O Intr")
@@ -28,7 +28,7 @@ record(mbbi, "$(dev):$(id):TYPE_RAW") {
 }
 
 # Control debug message verbosity
-record(mbbo, "$(dev):$(id):DBG") {
+record(mbbo, "$(P)$(R)$(id)DebugLvl-Sel") {
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
  field(ZRVL, "0")
@@ -44,7 +44,7 @@ record(mbbo, "$(dev):$(id):DBG") {
  field(PINI, "YES")
 }
 
-record(bi, "$(dev):$(id):ONLNSTAT") {
+record(bi, "$(P)$(R)$(id)Online-Sts") {
  field(DESC, "MCH online status")
  field(DTYP, "MCHsensor")
  field(SCAN, "I/O Intr")
@@ -56,7 +56,7 @@ record(bi, "$(dev):$(id):ONLNSTAT") {
  field(PINI, "YES")
 }
 
-record(mbbi, "$(dev):$(id):INIT") {
+record(mbbi, "$(P)$(R)$(id)Initialized-Sts") {
  field(DESC, "MCH comm initialized")
  field(DTYP, "MCHsensor")
  field(SCAN, "I/O Intr")
@@ -76,7 +76,7 @@ record(mbbi, "$(dev):$(id):INIT") {
  field(PINI, "YES")
 }
 
-record(bo, "$(dev):$(id):INITBYP") {
+record(bo, "$(P)$(R)$(id)InitBypass-Cmd") {
  field(DESC, "Override init for testing")
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
@@ -88,7 +88,7 @@ record(bo, "$(dev):$(id):INITBYP") {
  field(PINI, "NO")
 }
 
-record(bo, "$(dev):$(id):CONNECT") {
+record(bo, "$(P)$(R)$(id)Connect-Cmd") {
  field(DESC, "Enable comm with MCH")
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
@@ -99,81 +99,81 @@ record(bo, "$(dev):$(id):CONNECT") {
  field(OSV,  "NO_ALARM")
  field(VAL, "1")
  field(RVAL, "1")
- field(PINI, "YES") 
+ field(PINI, "YES")
  info(autosaveFields,"VAL RVAL")
 }
 
 ## Add power on, power off, hard-reset, and msg
 ## PVs to be consistent with other SLAC systems       
-#record(bo, "$(dev):$(id):POWEROFF") {     
+#record(bo, "$(P)$(R)$(id)POWEROFF") {     
 #  field(DESC, "Power off system")            
-#  field(FLNK, "$(dev):$(id):POWEROFFSEQ")
+#  field(FLNK, "$(P)$(R)$(id)POWEROFFSEQ")
 #  field(PINI, "NO")             
 #}                                               
 #
-#record(seq, "$(dev):$(id):POWEROFFSEQ") {
+#record(seq, "$(P)$(R)$(id)POWEROFFSEQ") {
 #  field(SELM, "All")               
 #  field(DOL1, "1")                 
-#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(LNK1, "$(P)$(R)$(id)POWERMSG PP")
 #  field(DOL2, "0")                 
-#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(LNK2, "$(P)$(R)$(id)POWERCTL PP")
 #  field(DLY3, "5")                
 #  field(DOL3, "0")                
-#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#  field(LNK3, "$(P)$(R)$(id)POWERMSG PP")
 #}                                   
 #
-#record(bo, "$(dev):$(id):POWERON") {
+#record(bo, "$(P)$(R)$(id)POWERON") {
 #  field(DESC, "Power on system")            
-#  field(FLNK, "$(dev):$(id):POWERONSEQ")
+#  field(FLNK, "$(P)$(R)$(id)POWERONSEQ")
 #  field(PINI, "NO")             
 #}                                 
 #
-#record(seq, "$(dev):$(id):POWERONSEQ") {
+#record(seq, "$(P)$(R)$(id)POWERONSEQ") {
 #  field(SELM, "All")              
 #  field(DOL1, "2")                 
-#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(LNK1, "$(P)$(R)$(id)POWERMSG PP")
 #  field(DOL2, "1")                
-#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(LNK2, "$(P)$(R)$(id)POWERCTL PP")
 #  field(DLY3, "5")                
 #  field(DOL3, "0")                
-#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#  field(LNK3, "$(P)$(R)$(id)POWERMSG PP")
 #}                                   
 #
-#record(bo, "$(dev):$(id):HARDRESET") {
+#record(bo, "$(P)$(R)$(id)HARDRESET") {
 #  field(DESC, "Power cycle system")            
-#  field(FLNK, "$(dev):$(id):HARDRESETSEQ")
+#  field(FLNK, "$(P)$(R)$(id)HARDRESETSEQ")
 #  field(PINI, "NO")
 #}                                   
 #
-#record(seq, "$(dev):$(id):HARDRESETSEQ") {
+#record(seq, "$(P)$(R)$(id)HARDRESETSEQ") {
 #  field(SELM, "All")                
 #  field(DOL1, "3")                 
-#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(LNK1, "$(P)$(R)$(id)POWERMSG PP")
 #  field(DOL2, "2")                  
-#  field(LNK2, "$(dev):$(id):POWERCTL PP") 
+#  field(LNK2, "$(P)$(R)$(id)POWERCTL PP") 
 #  field(DLY3, "5")                 
 #  field(DOL3, "0")                 
-#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#  field(LNK3, "$(P)$(R)$(id)POWERMSG PP")
 #}                                   
 #
-#record(bo, "$(dev):$(id):SOFTSHUTDOWN") {     
+#record(bo, "$(P)$(R)$(id)SOFTSHUTDOWN") {     
 #  field(DESC, "Soft shutdown system")            
-#  field(FLNK, "$(dev):$(id):SOFTSHUTDOWNSEQ")
+#  field(FLNK, "$(P)$(R)$(id)SOFTSHUTDOWNSEQ")
 #  field(PINI, "NO")             
 #}                                               
 #
-#record(seq, "$(dev):$(id):SOFTSHUTDOWNSEQ") {
+#record(seq, "$(P)$(R)$(id)SOFTSHUTDOWNSEQ") {
 #  field(SELM, "All")               
 #  field(DOL1, "1")                 
-#  field(LNK1, "$(dev):$(id):POWERMSG PP")
+#  field(LNK1, "$(P)$(R)$(id)POWERMSG PP")
 #  field(DOL2, "5")                 
-#  field(LNK2, "$(dev):$(id):POWERCTL PP")
+#  field(LNK2, "$(P)$(R)$(id)POWERCTL PP")
 #  field(DLY3, "5")                
 #  field(DOL3, "0")                
-#  field(LNK3, "$(dev):$(id):POWERMSG PP")
+#  field(LNK3, "$(P)$(R)$(id)POWERMSG PP")
 #}                                   
 #
-#record(mbbo, "$(dev):$(id):POWERMSG") {
+#record(mbbo, "$(P)$(R)$(id)POWERMSG") {
 #  field(ZRVL, "0")               
 #  field(ONVL, "1")               
 #  field(TWVL, "2")               
@@ -193,7 +193,7 @@ record(bo, "$(dev):$(id):CONNECT") {
 ## Vadatech MCH results are unreliable
 ## NAT MCH does not implement this command
 ## Dell Server and ATCA crates do seem to implement this
-#record(mbbo, "$(dev):$(id):POWERCTL") {
+#record(mbbo, "$(P)$(R)$(id)POWERCTL") {
 # field(DTYP, "MCHsensor")
 # field(OMSL, "supervisory")
 # field(OUT, "#B0 C0 N0 @$(link)+chas")
@@ -211,7 +211,7 @@ record(bo, "$(dev):$(id):CONNECT") {
 #}
 
 # Peform IPMI 'Cold Reset'
-record(bo, "$(dev):$(id):RESET") {
+record(bo, "$(P)$(R)$(id)Reset-Cmd") {
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
  field(OUT, "#B0 C0 N0 @$(link)+reset")
@@ -219,11 +219,11 @@ record(bo, "$(dev):$(id):RESET") {
 
 # Control sensor scan period [seconds]
 # Default is 10 seconds
-# Added this because PAL systems had 
+# Added this because PAL systems had
 # trouble at that rate
-# Must match SENSOR_SCAN_PERIODS array 
+# Must match SENSOR_SCAN_PERIODS array
 # definition in devMch.c
-record(mbbo, "$(dev):$(id):SENSOR_SCAN_PERIOD") {
+record(mbbo, "$(P)$(R)$(id)SensorScanPeriod-Sel") {
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
  field(ZRVL, "0")

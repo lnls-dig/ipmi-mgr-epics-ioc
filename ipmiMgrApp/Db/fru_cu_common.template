@@ -1,4 +1,4 @@
-record(mbbi, "$(dev):$(id)$(unit):FANAUTO") {
+record(mbbi, "$(P)$(R)$(id)AutoAdjust-Sts") {
   field(DESC, "Fan supports auto adjustment")
   field(SCAN, "I/O Intr")
   field(DTYP, "MCHsensor")
@@ -10,14 +10,14 @@ record(mbbi, "$(dev):$(id)$(unit):FANAUTO") {
   field(PINI, "YES")
 }
 
-record(longout, "$(dev):$(id)$(unit):FANSPEEDSET") {
+record(longout, "$(P)$(R)$(id)FanLevel-SP") {
   field(DESC, "Set fan level")
   field(DTYP, "FRUinfo")
   field(OUT,  "#B$(fruid) C0 N0 @$(link)+fan")
   field(OMSL, "supervisory")
 }
 
-record(ai, "$(dev):$(id)$(unit):FANLEVEL") {
+record(ai, "$(P)$(R)$(id)FanLevel-RB") {
   field(SCAN, "10 second")
   field(DESC, "Fan level")
   field(DTYP, "FRUinfo")
