@@ -1,7 +1,7 @@
 # FRU 'presence' record to indicate whether FRU
 # is active; used by edm visibility rules
 
-record(bi, "$(P)$(R)$(id)_P") {
+record(bi, "$(P)$(R)$(id)Prs-Sts") {
   field(DESC, "Module presence")
   field(SCAN, "I/O Intr")
   field(DTYP, "MCHsensor")
@@ -37,64 +37,64 @@ record(mbbi, "$(P)$(R)$(id)MState-Sts") {
   field(EIST, "Communication Lost")
 }
 
-record(ai, "$(P)$(R)$(id)FruId") {
+record(ai, "$(P)$(R)$(id)FruId-Cte") {
   field(DESC, "Module type")
   field(VAL,  "$(fruid)")
   field(PINI, "YES")
 }
 
-record(stringin, "$(P)$(R)$(id)BoardManuf") {
+record(stringin, "$(P)$(R)$(id)BoardManuf-Cte") {
   field(DESC, "Board manufacturer")
   field(SCAN, "I/O Intr")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bmf")
   field(PINI, "YES")
-  field(FLNK, "$(P)$(R)$(id)ProdName")
+  field(FLNK, "$(P)$(R)$(id)ProdName-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdName") {
+record(stringin, "$(P)$(R)$(id)ProdName-Cte") {
   field(DESC, "Board product name")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bp")
-  field(FLNK, "$(P)$(R)$(id)BoardSN")
+  field(FLNK, "$(P)$(R)$(id)BoardSN-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)BoardSN") {
+record(stringin, "$(P)$(R)$(id)BoardSN-Cte") {
   field(DESC, "Board serial number")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bsn")
-  field(FLNK, "$(P)$(R)$(id)BoardPN")
+  field(FLNK, "$(P)$(R)$(id)BoardPN-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)BoardPN") {
+record(stringin, "$(P)$(R)$(id)BoardPN-Cte") {
   field(DESC, "Board part number")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bpn")
-  field(FLNK, "$(P)$(R)$(id)ProdManuf")
+  field(FLNK, "$(P)$(R)$(id)ProdManuf-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdManuf") {
+record(stringin, "$(P)$(R)$(id)ProdManuf-Cte") {
   field(DESC, "Product manufacturer")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+pmf")
-  field(FLNK, "$(P)$(R)$(id)ProdName")
+  field(FLNK, "$(P)$(R)$(id)ProdName-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdName") {
+record(stringin, "$(P)$(R)$(id)ProdName-Cte") {
   field(DESC, "Product product name")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+pp")
-  field(FLNK, "$(P)$(R)$(id)ProdSN")
+  field(FLNK, "$(P)$(R)$(id)ProdSN-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdSN") {
+record(stringin, "$(P)$(R)$(id)ProdSN-Cte") {
   field(DESC, "Product serial number")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+psn")
-  field(FLNK, "$(P)$(R)$(id)ProdPN")
+  field(FLNK, "$(P)$(R)$(id)ProdPN-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdPN") {
+record(stringin, "$(P)$(R)$(id)ProdPN-Cte") {
   field(DESC, "Product part number")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+ppn")

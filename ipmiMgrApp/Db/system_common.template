@@ -1,4 +1,4 @@
-record(mbbi, "$(P)$(R)$(id)MCHType") {
+record(mbbi, "$(P)$(R)$(id)MCHType-Cte") {
  field(DESC, "Device type")
  field(DTYP, "MCHsensor")
  field(SCAN, "I/O Intr")
@@ -28,7 +28,7 @@ record(mbbi, "$(P)$(R)$(id)MCHType") {
 }
 
 # Control debug message verbosity
-record(mbbo, "$(P)$(R)$(id)DebugLvl-Sel") {
+record(mbbo, "$(P)$(R)$(id)DbgLvl-Sel") {
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
  field(ZRVL, "0")
@@ -56,7 +56,7 @@ record(bi, "$(P)$(R)$(id)Online-Sts") {
  field(PINI, "YES")
 }
 
-record(mbbi, "$(P)$(R)$(id)Initialized-Sts") {
+record(mbbi, "$(P)$(R)$(id)Init-Sts") {
  field(DESC, "MCH comm initialized")
  field(DTYP, "MCHsensor")
  field(SCAN, "I/O Intr")
@@ -211,7 +211,7 @@ record(bo, "$(P)$(R)$(id)Connect-Cmd") {
 #}
 
 # Peform IPMI 'Cold Reset'
-record(bo, "$(P)$(R)$(id)Reset-Cmd") {
+record(bo, "$(P)$(R)$(id)Rst-Cmd") {
  field(DTYP, "MCHsensor")
  field(OMSL, "supervisory")
  field(OUT, "#B0 C0 N0 @$(link)+reset")

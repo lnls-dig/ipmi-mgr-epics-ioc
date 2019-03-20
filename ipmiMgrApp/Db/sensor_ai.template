@@ -14,7 +14,7 @@ record(ai, "$(P)$(R)$(prefix)$(attr)-Mon")
 
 # sensor 'presence' record to indicate whether sensor
 # is active; used by edm visibility rules
-record(bi, "$(P)$(R)$(prefix)$(attr)_P") {
+record(bi, "$(P)$(R)$(prefix)$(attr)Prs-Sts") {
   field(DESC, "Sensor presence")
   field(SCAN, "I/O Intr")
   field(DTYP, "MCHsensor")
