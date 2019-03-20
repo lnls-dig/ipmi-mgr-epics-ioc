@@ -11,6 +11,6 @@ file "sensor_ai.db"
      	   { DMaxTemp		, 2	   , 1	  , $(fruid)	, $(id)  }
     	   { MTemp		, 3	   , 1	  , $(fruid)	, $(id)  }
      	   { MMaxTemp		, 4	   , 1	  , $(fruid)	, $(id)  }
-	   { 3d3V		, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { 12V		, 2	   , 2	  , $(fruid)	, $(id)  }
+	   { Volt3V3		, 1	   , 2	  , $(fruid)	, $(id)  }
+   	   { Volt12V		, 2	   , 2	  , $(fruid)	, $(id)  }
 }

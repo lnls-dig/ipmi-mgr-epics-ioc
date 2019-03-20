@@ -13,9 +13,9 @@ file "sensor_ai.db"
      	   { SMaxTemp		, 4	   , 1	  , $(fruid)	, $(id)  }
     	   { PTemp		, 5	   , 1	  , $(fruid)	, $(id)  }
      	   { PMaxTemp		, 6	   , 1	  , $(fruid)	, $(id)  }
-	   { d9V		, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { d9AnaV		, 2	   , 2	  , $(fruid)	, $(id)  }
-	   { 1d8V		, 3	   , 2	  , $(fruid)	, $(id)  }
-   	   { 3d3V		, 4	   , 2	  , $(fruid)	, $(id)  }
-	   { 12V		, 5	   , 2	  , $(fruid)	, $(id)  }
+	   { Volt0V9		, 1	   , 2	  , $(fruid)	, $(id)  }
+   	   { Volt0V9Ana		, 2	   , 2	  , $(fruid)	, $(id)  }
+	   { Volt1V8		, 3	   , 2	  , $(fruid)	, $(id)  }
+   	   { Volt3V3		, 4	   , 2	  , $(fruid)	, $(id)  }
+	   { Volt12V		, 5	   , 2	  , $(fruid)	, $(id)  }
 }

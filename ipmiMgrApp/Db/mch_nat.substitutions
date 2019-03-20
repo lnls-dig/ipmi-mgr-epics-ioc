@@ -64,8 +64,8 @@ file "mch_base.db"
 
 file "mch_clk_switch.db"
 {
-   pattern { id			, fruid	}
-           { $(id)ClkSwitch	, 60	}
+   pattern { id		, fruid	}
+           { $(id)ClkSw	, 60	}
 }
 
 file "mch_base.db"

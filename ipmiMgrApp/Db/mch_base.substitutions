@@ -28,13 +28,13 @@ file "fru_common.db"
 file "sensor_ai.db"
 {
    pattern { attr	, sensinst , type , fruid	, prefix }
-   	   { CPUTemp	, 1	   , 1	  , $(fruid)	, $(id)  }
-           { IOTemp	, 2	   , 1	  , $(fruid)	, $(id)  }
-	   { BA1d2V	, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { BA1d5V	, 2	   , 2	  , $(fruid)	, $(id)  }
-	   { BA1d8V	, 3	   , 2	  , $(fruid)	, $(id)  }
-   	   { BA2d5V	, 4	   , 2	  , $(fruid)	, $(id)  }
-	   { BA3d3V	, 5	   , 2	  , $(fruid)	, $(id)  }
-   	   { BA12V	, 6	   , 2	  , $(fruid)	, $(id)  }
-	   { Current	, 1	   , 3	  , $(fruid)	, $(id)  }
+   	   { TempCPU	, 1	   , 1	  , $(fruid)	, $(id)  }
+           { TempIO	, 2	   , 1	  , $(fruid)	, $(id)  }
+	   { VoltBA1V2	, 1	   , 2	  , $(fruid)	, $(id)  }
+   	   { VoltBA1V5	, 2	   , 2	  , $(fruid)	, $(id)  }
+	   { VoltBA1V8	, 3	   , 2	  , $(fruid)	, $(id)  }
+   	   { VoltBA2V5	, 4	   , 2	  , $(fruid)	, $(id)  }
+	   { VoltBA3V3	, 5	   , 2	  , $(fruid)	, $(id)  }
+   	   { VoltBA12V	, 6	   , 2	  , $(fruid)	, $(id)  }
+	   { Curr	, 1	   , 3	  , $(fruid)	, $(id)  }
 }

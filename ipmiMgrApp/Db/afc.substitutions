@@ -36,21 +36,21 @@ file "fru_common.db"
 file "sensor_ai.db"
 {
     pattern { attr		, sensinst	, type	, fruid		, prefix }
-            { FMC1_12V  	, 1		, 2	, $(fruid)	, $(id)  }
-            { FMC1_VADJ 	, 2		, 2	, $(fruid)	, $(id)  }
-            { FMC1_3V3  	, 3		, 2	, $(fruid)	, $(id)  }
-            { FMC2_12V  	, 4		, 2	, $(fruid)	, $(id)  }
-            { FMC2_VADJ 	, 5		, 2	, $(fruid)	, $(id)  }
-            { FMC2_3V3  	, 6		, 2	, $(fruid)	, $(id)  }
-            { FMC1_12VCurr	, 1		, 3	, $(fruid)	, $(id)  }
-            { FMC1_VADJCurr	, 2		, 3	, $(fruid)	, $(id)  }
-            { FMC1_3V3Curr	, 3		, 3	, $(fruid)	, $(id)  }
-            { FMC2_12VCurr	, 4		, 3	, $(fruid)	, $(id)  }
-            { FMC2_VADJCurr	, 5		, 3	, $(fruid)	, $(id)  }
-            { FMC2_3V3Curr	, 6		, 3	, $(fruid)	, $(id)  }
-            { FPGATemp  	, 1		, 1	, $(fruid)	, $(id)  }
-            { UCTemp    	, 2		, 1	, $(fruid)	, $(id)  }
-            { ClkSwitchTemp	, 3		, 1	, $(fruid)	, $(id)  }
-            { DCDCTemp  	, 4		, 1	, $(fruid)	, $(id)  }
-            { RAMTemp   	, 5		, 1	, $(fruid)	, $(id)  }
+            { FMC1Volt12V	, 1		, 2	, $(fruid)	, $(id)  }
+            { FMC1VoltVADJ	, 2		, 2	, $(fruid)	, $(id)  }
+            { FMC1Volt3V3	, 3		, 2	, $(fruid)	, $(id)  }
+            { FMC2Volt12V	, 4		, 2	, $(fruid)	, $(id)  }
+            { FMC2VoltVADJ	, 5		, 2	, $(fruid)	, $(id)  }
+            { FMC2Volt3V3	, 6		, 2	, $(fruid)	, $(id)  }
+            { FMC1Curr12V	, 1		, 3	, $(fruid)	, $(id)  }
+            { FMC1CurrVADJ	, 2		, 3	, $(fruid)	, $(id)  }
+            { FMC1Curr3V3	, 3		, 3	, $(fruid)	, $(id)  }
+            { FMC2Curr12V	, 4		, 3	, $(fruid)	, $(id)  }
+            { FMC2CurrVADJ	, 5		, 3	, $(fruid)	, $(id)  }
+            { FMC2Curr3V3	, 6		, 3	, $(fruid)	, $(id)  }
+            { TempFPGA		, 1		, 1	, $(fruid)	, $(id)  }
+            { TempUC		, 2		, 1	, $(fruid)	, $(id)  }
+            { TempClkSwitch	, 3		, 1	, $(fruid)	, $(id)  }
+            { TempDCDC		, 4		, 1	, $(fruid)	, $(id)  }
+            { TempRAM		, 5		, 1	, $(fruid)	, $(id)  }
 }
