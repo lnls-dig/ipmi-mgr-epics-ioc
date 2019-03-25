@@ -49,10 +49,10 @@ record(stringin, "$(P)$(R)$(id)BoardManuf-Cte") {
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bmf")
   field(PINI, "YES")
-  field(FLNK, "$(P)$(R)$(id)ProdName-Cte")
+  field(FLNK, "$(P)$(R)$(id)BoardName-Cte")
 }
 
-record(stringin, "$(P)$(R)$(id)ProdName-Cte") {
+record(stringin, "$(P)$(R)$(id)BoardName-Cte") {
   field(DESC, "Board product name")
   field(DTYP, "FRUinfo")
   field(INP, "#B$(fruid) C0 N0  @$(link)+bp")
