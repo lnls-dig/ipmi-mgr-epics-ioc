@@ -29,8 +29,8 @@ file "power_module.db"
 
 file "mch_nat.db"
 {
-    pattern { id   }
-            { MCH }
+    pattern { id   , unit }
+            { MCH  , 1    }
 }
 
 file "cooling_unit.db"
@@ -43,7 +43,7 @@ file "cooling_unit.db"
 file "rtm_cpu.db"
 {
     pattern { id	, fruid }
-            { RTMCpu	, 64	}
+            { MCHRtmCpu1	, 64	}
 }
 
 file "afc.db"
@@ -66,5 +66,5 @@ file "afc.db"
 file "rtm_timing.db"
 {
     pattern { id	, fruid }
-            { RTMTim	, 90	}
+            { RtmTim	, 90	}
 }

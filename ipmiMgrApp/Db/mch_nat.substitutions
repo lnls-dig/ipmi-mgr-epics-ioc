@@ -59,17 +59,17 @@
 file "mch_base.db"
 {
    pattern { id		, fruid	}
-           { $(id)Base	, 3	}
+           { $(id)Base$(unit)	, 3	}
 }
 
 file "mch_clk_switch.db"
 {
    pattern { id		, fruid	}
-           { $(id)ClkSw	, 60	}
+           { $(id)ClkSw$(unit)	, 60	}
 }
 
 file "mch_base.db"
 {
    pattern { id			, fruid	}
-           { $(id)PciHub	, 61	}
+           { $(id)PciHub$(unit)	, 61	}
 }
