@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 526
-y 264
+x 480
+y 110
 w 600
-h 500
+h 706
 font "helvetica-medium-r-10.0"
 ctlFont "helvetica-medium-r-10.0"
 btnFont "helvetica-medium-r-10.0"
@@ -34,7 +34,7 @@ release 0
 x 0
 y 8
 w 584
-h 352
+h 224
 lineColor index 3
 fill
 fillColor index 3
@@ -91,6 +91,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)BoardManuf-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -111,8 +112,9 @@ x 96
 y 80
 w 216
 h 24
-controlPv "$(P)$(R)$(id)$(unit)ProdName-Cte"
+controlPv "$(P)$(R)$(id)$(unit)BoardName-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -155,6 +157,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)BoardSN-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -217,6 +220,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)BoardPN-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -301,6 +305,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)ProdManuf-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -346,6 +351,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)ProdSN-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -368,6 +374,7 @@ w 216
 h 24
 controlPv "$(P)$(R)$(id)$(unit)ProdPN-Cte"
 font "helvetica-medium-r-12.0"
+fontAlign "center"
 fgColor index 16
 fgAlarm
 bgColor index 12
@@ -395,5 +402,25 @@ bgColor index 3
 value {
   "Product"
 }
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 16
+y 240
+w 448
+h 456
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "module_utca_power_nat"
+sizeOfs 5
+numDsps 0
 endObjectProperties
 

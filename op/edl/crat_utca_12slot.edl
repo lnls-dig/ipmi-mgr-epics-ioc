@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1800
-y 190
+x 480
+y 82
 w 972
 h 752
 font "helvetica-medium-r-12.0"
@@ -333,7 +333,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -402,13 +402,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=MCH,unit=1"
+  0 "id=MCHBase,unit=1"
 }
 endObjectProperties
 
@@ -435,7 +435,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCHBasePrs-Sts"
+visPv "$(P)$(R)MCHBase1Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -471,13 +471,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=MCH,unit=2"
+  0 "id=MCHBase,unit=2"
 }
 endObjectProperties
 
@@ -504,7 +504,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCH2BasePrs-Sts"
+visPv "$(P)$(R)MCHBase2Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -888,7 +888,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -957,7 +957,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1026,7 +1026,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1095,7 +1095,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1164,7 +1164,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1233,7 +1233,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1266,7 +1266,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)RTMTimPrs-Sts"
+visPv "$(P)$(R)RtmTimPrs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -1302,7 +1302,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1371,7 +1371,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1440,7 +1440,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1509,7 +1509,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1578,7 +1578,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1781,7 +1781,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1850,7 +1850,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -1919,7 +1919,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_amc"
 }
 setPosition {
   0 "parentWindow"
@@ -1988,7 +1988,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2057,7 +2057,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2126,7 +2126,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2195,7 +2195,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2264,7 +2264,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2333,7 +2333,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2402,7 +2402,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2471,7 +2471,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2540,7 +2540,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -2952,13 +2952,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=CLK,unit=1"
+  0 "id=MCHClkSw,unit=1"
 }
 endObjectProperties
 
@@ -2985,7 +2985,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCHClkSwPrs-Sts"
+visPv "$(P)$(R)MCHClkSw1Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -3021,13 +3021,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=CLK,unit=2"
+  0 "id=MCHClkSw,unit=2"
 }
 endObjectProperties
 
@@ -3054,7 +3054,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCH2ClkSwPrs-Sts"
+visPv "$(P)$(R)MCHClkSw2Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -3090,13 +3090,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=HUB,unit=1"
+  0 "id=MCHPciHub,unit=1"
 }
 endObjectProperties
 
@@ -3123,7 +3123,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCHPciHubPrs-Sts"
+visPv "$(P)$(R)MCHPciHub1Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -3159,13 +3159,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=HUB,unit=2"
+  0 "id=MCHPciHub,unit=2"
 }
 endObjectProperties
 
@@ -3192,77 +3192,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)MCH2PciHubPrs-Sts"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 92
-y 520
-w 48
-h 84
-
-beginGroup
-
-# (Related Display)
-object relatedDisplayClass
-beginObjectProperties
-major 4
-minor 4
-release 0
-x 93
-y 520
-w 47
-h 82
-fgColor index 14
-bgColor index 70
-topShadowColor index 1
-botShadowColor index 11
-font "helvetica-medium-r-12.0"
-numPvs 4
-numDsps 1
-displayFileName {
-  0 "module_utca"
-}
-setPosition {
-  0 "parentWindow"
-}
-symbols {
-  0 "id=MCHRTM,unit=1"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 95
-y 529
-w 40
-h 37
-font "helvetica-medium-r-10.0"
-fontAlign "center"
-fgColor index 14
-bgColor index 4
-useDisplayBg
-value {
-  "MCH "
-  "RTM"
-  "1"
-}
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(R)RTMCpuPrs-Sts"
+visPv "$(P)$(R)MCHPciHub2Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -3298,13 +3228,13 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
 }
 symbols {
-  0 "id=MCHRTM,unit=2"
+  0 "id=MCHRtmCpu,unit=2"
 }
 endObjectProperties
 
@@ -3332,7 +3262,7 @@ endObjectProperties
 
 endGroup
 
-visPv "$(P)$(R)RTM2CpuPrs-Sts"
+visPv "$(P)$(R)MCHRtmCpu2Prs-Sts"
 visMin "1"
 visMax "2"
 endObjectProperties
@@ -3368,7 +3298,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3436,7 +3366,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3504,7 +3434,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3572,7 +3502,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3640,7 +3570,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3708,7 +3638,7 @@ font "helvetica-medium-r-12.0"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "module_utca"
+  0 "module_utca_info"
 }
 setPosition {
   0 "parentWindow"
@@ -3811,5 +3741,98 @@ endGroup
 visPv "$(P)$(R)CUBotPrs-Sts"
 visMin "1"
 visMax "2"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 92
+y 520
+w 47
+h 82
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 92
+y 520
+w 47
+h 82
+fgColor index 14
+bgColor index 70
+topShadowColor index 1
+botShadowColor index 11
+font "helvetica-medium-r-12.0"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "module_utca_info"
+}
+setPosition {
+  0 "parentWindow"
+}
+symbols {
+  0 "id=MCHRtmCpu,unit=1"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 96
+y 528
+w 40
+h 37
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 4
+useDisplayBg
+value {
+  "MCH "
+  "RTM"
+  "1"
+}
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 40
+y 304
+w 80
+h 28
+fgColor index 14
+onColor index 4
+offColor index 4
+inconsistentColor index 4
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(P)$(R)Rst-Cmd"
+onLabel "Reset"
+offLabel "Reset"
+labelType "literal"
+buttonType "push"
+3d
+font "helvetica-medium-r-12.0"
+objType "controls"
 endObjectProperties
 

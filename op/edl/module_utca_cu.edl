@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 347
-y 147
+x 480
+y 52
 w 1024
 h 848
 font "helvetica-medium-r-10.0"
@@ -24,6 +24,48 @@ showGrid
 snapToGrid
 gridSize 8
 endScreenProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 576
+y 48
+w 232
+h 320
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "module_atca_power"
+sizeOfs 5
+numDsps 0
+noScroll
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 576
+y 48
+w 232
+h 320
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "module_utca_power_vt"
+sizeOfs 5
+numDsps 0
+noScroll
+endObjectProperties
 
 # (Rectangle)
 object activeRectangleClass
@@ -1291,129 +1333,6 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 576
-y 48
-w 232
-h 320
-
-beginGroup
-
-# (Embedded Window)
-object activePipClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 576
-y 48
-w 232
-h 320
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-displaySource "file"
-file "module_utca_power_nat"
-sizeOfs 5
-numDsps 0
-noScroll
-endObjectProperties
-
-endGroup
-
-#visPv "$(P)$(R)MCHType-Cte"
-#visMin "27"
-#visMax "28"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 576
-y 48
-w 232
-h 320
-
-beginGroup
-
-# (Embedded Window)
-object activePipClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 576
-y 48
-w 232
-h 320
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-displaySource "file"
-file "module_utca_power_vt"
-sizeOfs 5
-numDsps 0
-noScroll
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(R)MCHType-Cte"
-visMin "26"
-visMax "27"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 576
-y 48
-w 232
-h 320
-
-beginGroup
-
-# (Embedded Window)
-object activePipClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 576
-y 48
-w 232
-h 320
-fgColor index 14
-bgColor index 3
-topShadowColor index 1
-botShadowColor index 11
-displaySource "file"
-file "module_atca_power"
-sizeOfs 5
-numDsps 0
-noScroll
-endObjectProperties
-
-endGroup
-
-visPv "$(P)$(R)MCHType-Cte"
-visMin "4"
-visMax "6"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
 x 8
 y 48
 w 560
@@ -1488,5 +1407,26 @@ endGroup
 visPv "$(P)$(R)MCHType-Cte"
 visMin "4"
 visMax "6"
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 576
+y 48
+w 232
+h 320
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "module_utca_power_nat"
+sizeOfs 5
+numDsps 0
+noScroll
 endObjectProperties
 
