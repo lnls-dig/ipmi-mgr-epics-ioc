@@ -217,6 +217,13 @@ record(bo, "$(P)$(R)$(id)Rst-Cmd") {
  field(OUT, "#B0 C0 N0 @$(link)+reset")
 }
 
+# Peform FRU records rescan
+record(bo, "$(P)$(R)$(id)FruRescan-Cmd") {
+ field(DTYP, "MCHsensor")
+ field(OMSL, "supervisory")
+ field(OUT, "#B0 C0 N0 @$(link)+fru_rescan")
+}
+
 # Control sensor scan period [seconds]
 # Default is 10 seconds
 # Added this because PAL systems had
