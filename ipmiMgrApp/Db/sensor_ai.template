@@ -7,7 +7,7 @@ record(ai, "$(P)$(R)$(prefix)$(attr)-Mon")
   field(DTYP, "MCHsensor")
   field(INP, "#B$(fruid) C$(type) N$(sensinst) @$(link)+sens")
   field(PREC, "1")
-  field(SDIS, "$(P)$(R)$(prefix)$(attr)$(sensinst)P.SEVR")
+  field(SDIS, "$(P)$(R)$(prefix)$(attr)Prs-Sts.SEVR")
   field(DISV, "2")
   field(PINI, "YES")
 }
