@@ -68,7 +68,7 @@ file "mch_clk_switch.db"
            { $(id)ClkSw$(unit)	, 60	}
 }
 
-file "mch_base.db"
+file "mch_pci_hub.db"
 {
    pattern { id			, fruid	}
            { $(id)PciHub$(unit)	, 61	}
