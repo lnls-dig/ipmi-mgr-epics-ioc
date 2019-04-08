@@ -1,27 +1,23 @@
-#!../../bin/linux-x86_64/ipmiMgr
-
-## You may have to change IpmiMgr to something else
-## everywhere it appears in this file
-
 < envPaths
+epicsEnvSet("TOP", "../..")
+< IpmiMgr.config
 
-cd "${TOP}"
-
-epicsEnvSet("MCH_LINK", "mch-test")
+####################################################
 
 ## Register all support components
-dbLoadDatabase "dbd/ipmiMgr.dbd"
+dbLoadDatabase("$(TOP)/dbd/ipmiMgr.dbd",0,0)
 ipmiMgr_registerRecordDeviceDriver pdbbase
 
 ## Initialize connection to MCH
-drvAsynIPPortConfigure ("$(MCH_LINK)","$(IPADDR):623 udp",0,0,0)
-mchInit("$(MCH_LINK)")
+drvAsynIPPortConfigure ("MCHLink","$(IPADDR):623 udp",0,0,0)
+mchInit("MCHLink")
 
 ## Load record instances
-dbLoadRecords("db/microtca_bpm_crate.db", "link=$(MCH_LINK), P=$(P), R=$(R)")
+dbLoadRecords("${TOP}/db/microtca_bpm_crate.db", "link=MCHLink, P=$(P), R=$(R)")
 
-cd "${TOP}/iocBoot/${IOC}"
+# < save_restore.cmd
+
 iocInit
 
 ## Start any sequence programs
-#seq sncxxx,"user=rootHost"
+# No sequencer program
