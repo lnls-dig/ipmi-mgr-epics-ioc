@@ -1,0 +1,4 @@
+# General configuration
+EPICS_HOST_ARCH=linux-x86_64
+EPICS_CA_MAX_ARRAY_BYTES=50000000
+PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/epics/base/bin/linux-x86_64
