@@ -23,12 +23,8 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-ASYN=/opt/epics/synApps-lnls-R1-0-0/support/asyn-R4-33
-IOCSTATS=/opt/epics/synApps-lnls-R1-0-0/support/iocStats-3-1-15
-IPMICOMM=/ipmiComm
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
-EPICS_BASE = /opt/epics/base
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:
