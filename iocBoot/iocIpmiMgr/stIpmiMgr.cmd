@@ -9,11 +9,11 @@ dbLoadDatabase("$(TOP)/dbd/ipmiMgr.dbd",0,0)
 ipmiMgr_registerRecordDeviceDriver pdbbase
 
 ## Initialize connection to MCH
-drvAsynIPPortConfigure ("MCHLink","$(IPADDR):623 udp",0,0,0)
-mchInit("MCHLink")
+drvAsynIPPortConfigure ("$(PORT)","$(IPADDR):623 udp",0,0,0)
+mchInit("$(PORT)")
 
 ## Load record instances
-dbLoadRecords("${TOP}/db/microtca_bpm_crate.db", "link=MCHLink, P=$(P), R=$(R)")
+dbLoadRecords("${TOP}/db/microtca_bpm_crate.db", "link=$(PORT),P=$(P),R=$(R)")
 
 # < save_restore.cmd
 
