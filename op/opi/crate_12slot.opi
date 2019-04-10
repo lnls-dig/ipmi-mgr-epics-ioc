@@ -18,8 +18,6 @@
   <height>850</height>
   <macros>
     <include_parent_macros>true</include_parent_macros>
-    <P>CRATE:</P>
-    <R>TEST1:</R>
   </macros>
   <name></name>
   <rules />
