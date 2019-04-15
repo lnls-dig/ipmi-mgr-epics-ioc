@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0.201711290101</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -168,9 +168,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -227,9 +227,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -286,9 +286,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -345,9 +345,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -404,9 +404,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -463,9 +463,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -522,9 +522,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -581,9 +581,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -640,9 +640,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -699,9 +699,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -758,9 +758,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -817,9 +817,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -876,9 +876,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -935,9 +935,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -994,9 +994,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -1053,9 +1053,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
@@ -1112,9 +1112,9 @@ $(pv_value)</tooltip>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules>
-      <rule name="Presence_text" prop_id="text" out_exp="false">
+      <rule name="Presence_text" prop_id="visible" out_exp="false">
         <exp bool_exp="pv0 == 0">
-          <value></value>
+          <value>false</value>
         </exp>
         <pv trig="true">$(P)$(R)$(MOD)Prs-Sts</pv>
       </rule>
