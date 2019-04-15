@@ -1,3 +1,17 @@
+# nat> show_sensorinfo 60
+# Sensor Information for FRU 60 / CLK1
+# ==================================================================
+#   #   SDRType  Sensor Entity Inst  Value   State    Name
+# ------------------------------------------------------------------
+#   -   MDevLoc          0xc2  0x63                    MCH-Clock
+#   1   Full     Temp    0xc2  0x63  32 C       ok     Temp DC/DC
+#   2   Full     Temp    0xc2  0x63  37 C       ok     Temp DC/DC max
+#   3   Full     Temp    0xc2  0x63  42 C       ok     Temp Mux
+#   4   Full     Temp    0xc2  0x63  46 C       ok     Temp Mux max
+#   5   Full     Voltage 0xc2  0x63  3.328 V    ok     3.3V
+#   6   Full     Voltage 0xc2  0x63  12.06 V    ok     12V
+# ------------------------------------------------------------------
+
 file "fru_common.db"
 {
     pattern { id    , fruid    }

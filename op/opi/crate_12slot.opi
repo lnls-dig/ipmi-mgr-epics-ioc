@@ -4014,7 +4014,7 @@ $(pv_value)</tooltip>
         <path>mch.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <MOD>MCH</MOD>
+          <MCH_MOD>MCH1</MCH_MOD>
         </macros>
         <mode>1</mode>
         <description></description>

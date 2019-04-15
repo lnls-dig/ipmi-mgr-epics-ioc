@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0.201711290101</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -54,6 +54,7 @@
     <lock_children>false</lock_children>
     <macros>
       <include_parent_macros>true</include_parent_macros>
+      <MOD>$(MCH_MOD)Base</MOD>
     </macros>
     <name>Grouping Container_1</name>
     <rules />
@@ -93,7 +94,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA1V2</SENS>
+        <SENS>VoltBA1V2</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -131,7 +132,7 @@
       <foreground_color>
         <color red="0" green="0" blue="0" />
       </foreground_color>
-      <height>18</height>
+      <height>17</height>
       <horizontal_alignment>0</horizontal_alignment>
       <name>Label</name>
       <rules />
@@ -147,7 +148,7 @@
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>85</width>
+      <width>78</width>
       <wrap_words>false</wrap_words>
       <wuid>4b6570eb:169e39ed6e4:279</wuid>
       <x>0</x>
@@ -174,7 +175,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA1V5</SENS>
+        <SENS>VoltBA1V5</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -215,7 +216,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA1V8</SENS>
+        <SENS>VoltBA1V8</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -256,7 +257,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA2V5</SENS>
+        <SENS>VoltBA2V5</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -297,7 +298,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA3V3</SENS>
+        <SENS>VoltBA3V3</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -338,7 +339,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1VoltBA12V</SENS>
+        <SENS>VoltBA12V</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -379,7 +380,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1Curr</SENS>
+        <SENS>Curr</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -420,7 +421,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1TempCPU</SENS>
+        <SENS>TempCPU</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -461,7 +462,6 @@
       <height>124</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <MOD>MCHBase1</MOD>
       </macros>
       <name>Linking Container</name>
       <opi_file>fru_info.opi</opi_file>
@@ -502,7 +502,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>Base1TempIO</SENS>
+        <SENS>TempIO</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -542,9 +542,10 @@
       <color red="192" green="192" blue="192" />
     </foreground_color>
     <height>246</height>
-    <lock_children>true</lock_children>
+    <lock_children>false</lock_children>
     <macros>
       <include_parent_macros>true</include_parent_macros>
+      <MOD>$(MCH_MOD)ClkSw</MOD>
     </macros>
     <name>Grouping Container_1</name>
     <rules />
@@ -581,7 +582,7 @@
       <foreground_color>
         <color red="0" green="0" blue="0" />
       </foreground_color>
-      <height>18</height>
+      <height>17</height>
       <horizontal_alignment>0</horizontal_alignment>
       <name>Label</name>
       <rules />
@@ -597,7 +598,7 @@
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>212</width>
+      <width>191</width>
       <wrap_words>false</wrap_words>
       <wuid>4b6570eb:169e39ed6e4:57e</wuid>
       <x>0</x>
@@ -624,7 +625,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1DTemp</SENS>
+        <SENS>DTemp</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -665,7 +666,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1DMaxTemp</SENS>
+        <SENS>DMaxTemp</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -706,7 +707,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1MTemp</SENS>
+        <SENS>MTemp</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -747,7 +748,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1MMaxTemp</SENS>
+        <SENS>MMaxTemp</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -788,7 +789,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1Volt12V</SENS>
+        <SENS>Volt12V</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -829,7 +830,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>ClkSw1Volt3V3</SENS>
+        <SENS>Volt3V3</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -870,7 +871,6 @@
       <height>124</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <MOD>MCHClkSw1</MOD>
       </macros>
       <name>Linking Container</name>
       <opi_file>fru_info.opi</opi_file>
@@ -913,6 +913,7 @@
     <lock_children>false</lock_children>
     <macros>
       <include_parent_macros>true</include_parent_macros>
+      <MOD>$(MCH_MOD)PciHub</MOD>
     </macros>
     <name>Grouping Container_2</name>
     <rules />
@@ -952,7 +953,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1DTemp</SENS>
+        <SENS>DTemp</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -990,7 +991,7 @@
       <foreground_color>
         <color red="0" green="0" blue="0" />
       </foreground_color>
-      <height>18</height>
+      <height>17</height>
       <horizontal_alignment>0</horizontal_alignment>
       <name>Label</name>
       <rules />
@@ -1006,7 +1007,7 @@
       <vertical_alignment>1</vertical_alignment>
       <visible>true</visible>
       <widget_type>Label</widget_type>
-      <width>193</width>
+      <width>175</width>
       <wrap_words>false</wrap_words>
       <wuid>4b6570eb:169e39ed6e4:6a4</wuid>
       <x>0</x>
@@ -1033,7 +1034,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1DMaxTemp</SENS>
+        <SENS>DMaxTemp</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -1074,7 +1075,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1STemp</SENS>
+        <SENS>STemp</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -1115,7 +1116,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1SMaxTemp</SENS>
+        <SENS>SMaxTemp</SENS>
       </macros>
       <name>Linking Container_2</name>
       <opi_file>sensor.opi</opi_file>
@@ -1156,7 +1157,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1PTemp</SENS>
+        <SENS>PTemp</SENS>
       </macros>
       <name>Linking Container_3</name>
       <opi_file>sensor.opi</opi_file>
@@ -1197,7 +1198,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1PMaxTemp</SENS>
+        <SENS>PMaxTemp</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -1238,7 +1239,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1Volt0V9</SENS>
+        <SENS>Volt0V9</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -1279,7 +1280,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1Volt0V9Ana</SENS>
+        <SENS>Volt0V9Ana</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -1320,7 +1321,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1Volt1V8</SENS>
+        <SENS>Volt1V8</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -1361,7 +1362,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1Volt3V3</SENS>
+        <SENS>Volt3V3</SENS>
       </macros>
       <name>Linking Container_4</name>
       <opi_file>sensor.opi</opi_file>
@@ -1402,7 +1403,7 @@
       <height>42</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <SENS>PciHub1Volt12V</SENS>
+        <SENS>Volt12V</SENS>
       </macros>
       <name>Linking Container_1</name>
       <opi_file>sensor.opi</opi_file>
@@ -1443,7 +1444,6 @@
       <height>124</height>
       <macros>
         <include_parent_macros>true</include_parent_macros>
-        <MOD>MCHPciHub1</MOD>
       </macros>
       <name>Linking Container</name>
       <opi_file>fru_info.opi</opi_file>
@@ -1466,7 +1466,7 @@
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
     <actions hook="false" hook_all="false" />
-    <auto_size>false</auto_size>
+    <auto_size>true</auto_size>
     <background_color>
       <color red="255" green="255" blue="255" />
     </background_color>
@@ -1482,7 +1482,7 @@
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <height>20</height>
+    <height>19</height>
     <horizontal_alignment>0</horizontal_alignment>
     <name>Label</name>
     <rules />
@@ -1492,13 +1492,13 @@
       <keep_wh_ratio>false</keep_wh_ratio>
     </scale_options>
     <scripts />
-    <text>$(MOD)</text>
+    <text>$(MCH_MOD)</text>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>80</width>
+    <width>110</width>
     <wrap_words>false</wrap_words>
     <wuid>4b6570eb:169e39ed6e4:bb6</wuid>
     <x>0</x>

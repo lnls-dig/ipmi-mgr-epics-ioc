@@ -1,21 +1,40 @@
+# nat> show_sensorinfo 61
+# Sensor Information for FRU 61 / HUB1
+# ==================================================================
+#   #   SDRType  Sensor Entity Inst  Value   State    Name
+# ------------------------------------------------------------------
+#   -   MDevLoc          0xc2  0x64                    MCH-PCIe
+#   1   Full     Temp    0xc2  0x64  33 C       ok     Temp DC/DC
+#   2   Full     Temp    0xc2  0x64  38 C       ok     Temp DC/DC max
+#   3   Full     Temp    0xc2  0x64  52 C       ok     Temp Switch
+#   4   Full     Temp    0xc2  0x64  57 C       ok     Temp Switch max
+#   5   Full     Temp    0xc2  0x64  34 C       ok     Temp PCB
+#   6   Full     Temp    0xc2  0x64  30 C       ok     Temp PCB max
+#   7   Full     Voltage 0xc2  0x64  0.90 V     ok     0.9V
+#   8   Full     Voltage 0xc2  0x64  0.90 V     ok     0.9V analog
+#   9   Full     Voltage 0xc2  0x64  1.80 V     ok     1.8V
+#  10   Full     Voltage 0xc2  0x64  3.392 V    ok     3.3V
+#  11   Full     Voltage 0xc2  0x64  12.30 V    ok     12V
+# ------------------------------------------------------------------
+
 file "fru_common.db"
 {
-   pattern { id		, fruid 	}
-      	   { $(id)	, $(fruid)	}
+    pattern { id    , fruid    }
+            { $(id) , $(fruid) }
 }
 
 file "sensor_ai.db"
 {
-   pattern { attr		, sensinst , type , fruid	, prefix }
-       	   { DTemp		, 1	   , 1	  , $(fruid)	, $(id)  }
-     	   { DMaxTemp		, 2	   , 1	  , $(fruid)	, $(id)  }
-    	   { STemp		, 3	   , 1	  , $(fruid)	, $(id)  }
-     	   { SMaxTemp		, 4	   , 1	  , $(fruid)	, $(id)  }
-    	   { PTemp		, 5	   , 1	  , $(fruid)	, $(id)  }
-     	   { PMaxTemp		, 6	   , 1	  , $(fruid)	, $(id)  }
-	   { Volt0V9		, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { Volt0V9Ana		, 2	   , 2	  , $(fruid)	, $(id)  }
-	   { Volt1V8		, 3	   , 2	  , $(fruid)	, $(id)  }
-   	   { Volt3V3		, 4	   , 2	  , $(fruid)	, $(id)  }
-	   { Volt12V		, 5	   , 2	  , $(fruid)	, $(id)  }
+    pattern { attr        , sensinst , type , fruid       , prefix }
+            { DTemp       , 1        , 1    , $(fruid)    , $(id)  }
+            { DMaxTemp    , 2        , 1    , $(fruid)    , $(id)  }
+            { STemp       , 3        , 1    , $(fruid)    , $(id)  }
+            { SMaxTemp    , 4        , 1    , $(fruid)    , $(id)  }
+            { PTemp       , 5        , 1    , $(fruid)    , $(id)  }
+            { PMaxTemp    , 6        , 1    , $(fruid)    , $(id)  }
+            { Volt0V9     , 1        , 2    , $(fruid)    , $(id)  }
+            { Volt0V9Ana  , 2        , 2    , $(fruid)    , $(id)  }
+            { Volt1V8     , 3        , 2    , $(fruid)    , $(id)  }
+            { Volt3V3     , 4        , 2    , $(fruid)    , $(id)  }
+            { Volt12V     , 5        , 2    , $(fruid)    , $(id)  }
 }
