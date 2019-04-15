@@ -1,16 +1,16 @@
 file "fru_common.db"
 {
-   pattern { id		, fruid 	}
-      	   { $(id)	, $(fruid)	}
+    pattern { id    , fruid    }
+            { $(id) , $(fruid) }
 }
 
 file "sensor_ai.db"
 {
-   pattern { attr		, sensinst , type , fruid	, prefix }
-     	   { DTemp		, 1	   , 1	  , $(fruid)	, $(id)  }
-     	   { DMaxTemp		, 2	   , 1	  , $(fruid)	, $(id)  }
-    	   { MTemp		, 3	   , 1	  , $(fruid)	, $(id)  }
-     	   { MMaxTemp		, 4	   , 1	  , $(fruid)	, $(id)  }
-	   { Volt3V3		, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { Volt12V		, 2	   , 2	  , $(fruid)	, $(id)  }
+    pattern { attr       , sensinst , type , fruid       , prefix }
+            { DTemp      , 1        , 1    , $(fruid)    , $(id)  }
+            { DMaxTemp   , 2        , 1    , $(fruid)    , $(id)  }
+            { MTemp      , 3        , 1    , $(fruid)    , $(id)  }
+            { MMaxTemp   , 4        , 1    , $(fruid)    , $(id)  }
+            { Volt3V3    , 1        , 2    , $(fruid)    , $(id)  }
+            { Volt12V    , 2        , 2    , $(fruid)    , $(id)  }
 }

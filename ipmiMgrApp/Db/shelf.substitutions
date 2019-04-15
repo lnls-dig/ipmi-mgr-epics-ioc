@@ -13,6 +13,6 @@
 
 file "fru_common.db"
 {
-   pattern { id		, fruid	}
-           { $(id)	, 0	}
+    pattern { id    , fruid }
+            { $(id) , 0     }
 }

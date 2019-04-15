@@ -43,37 +43,37 @@
 
 file "fru_common.db"
 {
-   pattern { id		, fruid 	}
-           { $(id)	, $(fruid)	}
+    pattern { id    , fruid    }
+            { $(id) , $(fruid) }
 }
 
 file "sensor_ai.db"
 {
-    pattern { attr	, sensinst	, type	, fruid		, prefix }
-            { TempCpu0	, 1		, 1	, $(fruid)	, $(id)  }
-            { TempPath	, 2		, 1	, $(fruid)	, $(id)  }
-            { TempCool	, 3		, 1	, $(fruid)	, $(id)  }
-            { TempTraf	, 4		, 1	, $(fruid)	, $(id)  }
-            { VoltMP00V	, 1		, 2	, $(fruid)	, $(id)  }
-            { VoltSMP0V	, 2		, 2	, $(fruid)	, $(id)  }
-            { VoltSMPPV	, 3		, 2	, $(fruid)	, $(id)  }
-            { VoltPP00V	, 4		, 2	, $(fruid)	, $(id)  }
-            { Volt12HHV	, 5		, 2	, $(fruid)	, $(id)  }
-            { CurrSum	, 1		, 3	, $(fruid)	, $(id)  }
-            { CurrCh01	, 2		, 3	, $(fruid)	, $(id)  }
-            { CurrCh02	, 3		, 3	, $(fruid)	, $(id)  }
-            { CurrCh03	, 4		, 3	, $(fruid)	, $(id)  }
-            { CurrCh04	, 5		, 3	, $(fruid)	, $(id)  }
-            { CurrCh05	, 6		, 3	, $(fruid)	, $(id)  }
-            { CurrCh06	, 7		, 3	, $(fruid)	, $(id)  }
-            { CurrCh07	, 8		, 3	, $(fruid)	, $(id)  }
-            { CurrCh08	, 9		, 3	, $(fruid)	, $(id)  }
-            { CurrCh09	, 10		, 3	, $(fruid)	, $(id)  }
-            { CurrCh10	, 11		, 3	, $(fruid)	, $(id)  }
-            { CurrCh11	, 12		, 3	, $(fruid)	, $(id)  }
-            { CurrCh12	, 13		, 3	, $(fruid)	, $(id)  }
-            { CurrCh13	, 14		, 3	, $(fruid)	, $(id)  }
-            { CurrCh14	, 15		, 3	, $(fruid)	, $(id)  }
-            { CurrCh15	, 16		, 3	, $(fruid)	, $(id)  }
-            { CurrCh16	, 17		, 3	, $(fruid)	, $(id)  }
+    pattern { attr        , sensinst , type , fruid    , prefix }
+            { TempCpu0    , 1        , 1    , $(fruid) , $(id)  }
+            { TempPath    , 2        , 1    , $(fruid) , $(id)  }
+            { TempCool    , 3        , 1    , $(fruid) , $(id)  }
+            { TempTraf    , 4        , 1    , $(fruid) , $(id)  }
+            { VoltMP00V   , 1        , 2    , $(fruid) , $(id)  }
+            { VoltSMP0V   , 2        , 2    , $(fruid) , $(id)  }
+            { VoltSMPPV   , 3        , 2    , $(fruid) , $(id)  }
+            { VoltPP00V   , 4        , 2    , $(fruid) , $(id)  }
+            { Volt12HHV   , 5        , 2    , $(fruid) , $(id)  }
+            { CurrSum     , 1        , 3    , $(fruid) , $(id)  }
+            { CurrCh01    , 2        , 3    , $(fruid) , $(id)  }
+            { CurrCh02    , 3        , 3    , $(fruid) , $(id)  }
+            { CurrCh03    , 4        , 3    , $(fruid) , $(id)  }
+            { CurrCh04    , 5        , 3    , $(fruid) , $(id)  }
+            { CurrCh05    , 6        , 3    , $(fruid) , $(id)  }
+            { CurrCh06    , 7        , 3    , $(fruid) , $(id)  }
+            { CurrCh07    , 8        , 3    , $(fruid) , $(id)  }
+            { CurrCh08    , 9        , 3    , $(fruid) , $(id)  }
+            { CurrCh09    , 10       , 3    , $(fruid) , $(id)  }
+            { CurrCh10    , 11       , 3    , $(fruid) , $(id)  }
+            { CurrCh11    , 12       , 3    , $(fruid) , $(id)  }
+            { CurrCh12    , 13       , 3    , $(fruid) , $(id)  }
+            { CurrCh13    , 14       , 3    , $(fruid) , $(id)  }
+            { CurrCh14    , 15       , 3    , $(fruid) , $(id)  }
+            { CurrCh15    , 16       , 3    , $(fruid) , $(id)  }
+            { CurrCh16    , 17       , 3    , $(fruid) , $(id)  }
  }

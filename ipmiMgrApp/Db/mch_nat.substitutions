@@ -1,6 +1,6 @@
 #
-# Type 1 : MCH  
-#          This is the standard ESS MCH for 9U/3U MTCA crate
+# Type 1 : MCH
+#          This is the standard NAT MCH for 9U/3U MTCA crate
 #
 #
 # MCH (0)
@@ -58,18 +58,18 @@
 
 file "mch_base.db"
 {
-   pattern { id		, fruid	}
-           { $(id)Base$(unit)	, 3	}
+    pattern { id                , fruid }
+            { $(id)Base$(unit)  , 3     }
 }
 
 file "mch_clk_switch.db"
 {
-   pattern { id		, fruid	}
-           { $(id)ClkSw$(unit)	, 60	}
+    pattern { id                , fruid }
+            { $(id)ClkSw$(unit) , 60    }
 }
 
 file "mch_pci_hub.db"
 {
-   pattern { id			, fruid	}
-           { $(id)PciHub$(unit)	, 61	}
+    pattern { id                   , fruid }
+            { $(id)PciHub$(unit)   , 61    }
 }

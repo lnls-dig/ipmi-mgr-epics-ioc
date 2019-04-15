@@ -21,20 +21,20 @@
 
 file "fru_common.db"
 {
-   pattern { id		, fruid		}
-      	   { $(id)	, $(fruid)	}
+    pattern { id    , fruid    }
+            { $(id) , $(fruid) }
 }
 
 file "sensor_ai.db"
 {
-   pattern { attr	, sensinst , type , fruid	, prefix }
-   	   { TempCPU	, 1	   , 1	  , $(fruid)	, $(id)  }
-           { TempIO	, 2	   , 1	  , $(fruid)	, $(id)  }
-	   { VoltBA1V2	, 1	   , 2	  , $(fruid)	, $(id)  }
-   	   { VoltBA1V5	, 2	   , 2	  , $(fruid)	, $(id)  }
-	   { VoltBA1V8	, 3	   , 2	  , $(fruid)	, $(id)  }
-   	   { VoltBA2V5	, 4	   , 2	  , $(fruid)	, $(id)  }
-	   { VoltBA3V3	, 5	   , 2	  , $(fruid)	, $(id)  }
-   	   { VoltBA12V	, 6	   , 2	  , $(fruid)	, $(id)  }
-	   { Curr	, 1	   , 3	  , $(fruid)	, $(id)  }
+    pattern { attr        , sensinst , type , fruid    , prefix }
+            { TempCPU     , 1        , 1    , $(fruid) , $(id)  }
+            { TempIO      , 2        , 1    , $(fruid) , $(id)  }
+            { VoltBA1V2   , 1        , 2    , $(fruid) , $(id)  }
+            { VoltBA1V5   , 2        , 2    , $(fruid) , $(id)  }
+            { VoltBA1V8   , 3        , 2    , $(fruid) , $(id)  }
+            { VoltBA2V5   , 4        , 2    , $(fruid) , $(id)  }
+            { VoltBA3V3   , 5        , 2    , $(fruid) , $(id)  }
+            { VoltBA12V   , 6        , 2    , $(fruid) , $(id)  }
+            { Curr        , 1        , 3    , $(fruid) , $(id)  }
 }

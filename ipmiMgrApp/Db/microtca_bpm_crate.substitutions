@@ -22,49 +22,49 @@ file "system_common.db"
 
 file "power_module.db"
 {
-    pattern { id	, fruid }
-            { PM1  	, 51	}
-            { PM2  	, 53	}
+    pattern { id    , fruid }
+            { PM1   , 51    }
+            { PM2   , 53    }
 }
 
 file "mch_nat.db"
 {
-    pattern { id   , unit }
-            { MCH  , 1    }
+    pattern { id    , unit }
+            { MCH   , 1    }
 }
 
 file "cooling_unit.db"
 {
-    pattern { id	, fruid }
-            { CUTop	, 40	}
-            { CUBot	, 41	}
+    pattern { id    , fruid }
+            { CUTop , 40    }
+            { CUBot , 41    }
 }
 
 file "rtm_cpu.db"
 {
-    pattern { id	, fruid }
-            { MCHRtmCpu1	, 64	}
+    pattern { id           , fruid }
+            { MCHRtmCpu1   , 64    }
 }
 
 file "afc.db"
 {
-    pattern { id	, fruid }
-            { AMC1  	, 5	}
-            { AMC2  	, 6	}
-            { AMC3  	, 7	}
-            { AMC4  	, 8	}
-            { AMC5  	, 9	}
-            { AMC6  	, 10	}
-            { AMC7  	, 11	}
-            { AMC8  	, 12	}
-            { AMC9  	, 13	}
-            { AMC10  	, 14	}
-            { AMC11  	, 15	}
-            { AMC12  	, 16	}
+    pattern { id    , fruid }
+            { AMC1  , 5     }
+            { AMC2  , 6     }
+            { AMC3  , 7     }
+            { AMC4  , 8     }
+            { AMC5  , 9     }
+            { AMC6  , 10    }
+            { AMC7  , 11    }
+            { AMC8  , 12    }
+            { AMC9  , 13    }
+            { AMC10 , 14    }
+            { AMC11 , 15    }
+            { AMC12 , 16    }
 }
 
 file "rtm_timing.db"
 {
-    pattern { id	, fruid }
-            { RtmTim	, 90	}
+    pattern { id       , fruid }
+            { RtmTim   , 90    }
 }
