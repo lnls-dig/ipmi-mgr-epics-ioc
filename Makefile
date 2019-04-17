@@ -3,7 +3,6 @@ TOP = .
 include $(TOP)/configure/CONFIG
 DIRS := $(DIRS) $(filter-out $(DIRS), configure)
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *App))
-DIRS += install
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocBoot))
 
 define DIR_template
@@ -16,3 +15,15 @@ iocBoot_DEPEND_DIRS += $(filter %App,$(DIRS))
 include $(TOP)/configure/RULES_TOP
 
 
+
+install:
+	$(MAKE) -C install install
+.PHONY: install
+
+uninstall:
+	$(MAKE) -C install uninstall
+.PHONY: uninstall
+
+realuninstall:
+	$(MAKE) -C install realuninstall
+.PHONY: realuninstall
