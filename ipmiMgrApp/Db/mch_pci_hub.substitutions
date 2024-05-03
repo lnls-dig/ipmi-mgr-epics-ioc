@@ -19,8 +19,8 @@
 
 file "fru_common.db"
 {
-    pattern { id    , fruid    }
-            { $(id) , $(fruid) }
+    pattern { id        , fruid    }
+            { $(suffix) , $(fruid) }
 }
 
 file "sensor_ai.db"
