@@ -1,5 +1,5 @@
 #
-# RTM AFC Timing
+# RTM 8SFP
 #
 
 #nat> show_sensorinfo 90
@@ -23,6 +23,6 @@ file "fru_common.db"
 file "sensor_ai.db"
 {
     pattern { attr        , sensinst , type , fruid    , prefix }
-            { TempTop     , 1        , 1    , $(fruid) , $(id)  }
-            { TempBottom  , 2        , 1    , $(fruid) , $(id)  }
+            { TempRTM1    , 1        , 1    , $(fruid) , $(id)  }
+            { TempRTM2    , 2        , 1    , $(fruid) , $(id)  }
 }

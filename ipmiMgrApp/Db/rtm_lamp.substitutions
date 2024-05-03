@@ -1,0 +1,30 @@
+#
+# RTM AFC FOFB
+#
+
+#nat> show_sensorinfo 91
+#Sensor Information for FRU 91 / RTM2
+#==================================================================
+#  #   SDRType  Sensor Entity Inst  Value   State    Name
+#------------------------------------------------------------------
+#  -   MDevLoc          0xc0  0x62                    AFC v4-RTM
+#  8   Compact  0xf2    0xc0  0x62  0xa1              HOTSWAP RTM
+#  9   Full     Temp    0xc0  0x62  27.0 C     ok     TEMP RTM1
+# 10   Full     Temp    0xc0  0x62  26.0 C     ok     TEMP RTM2
+# 11   Full     Temp    0xc0  0x62  30.5 C     ok     TEMP RTM3
+# 12   Compact  0xf0    0xc0  0x62  0x10              HS 091 RTM2
+#------------------------------------------------------------------
+
+file "fru_common.db"
+{
+   pattern { id    , fruid    }
+           { $(id) , $(fruid) }
+}
+
+file "sensor_ai.db"
+{
+    pattern { attr        , sensinst , type , fruid    , prefix }
+            { TempRTM1    , 1        , 1    , $(fruid) , $(id)  }
+            { TempRTM2    , 2        , 1    , $(fruid) , $(id)  }
+            { TempRTM3    , 3        , 1    , $(fruid) , $(id)  }
+}
