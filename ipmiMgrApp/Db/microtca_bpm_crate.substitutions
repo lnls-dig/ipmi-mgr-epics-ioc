@@ -43,11 +43,10 @@ file "cooling_unit.db"
             { CUBot , 41    }
 }
 
-file "afc.db"
+file "afcv3.db"
 {
     pattern { id    , fruid }
             { AMC1  , 5     }
-            { AMC2  , 6     }
             { AMC3  , 7     }
             { AMC4  , 8     }
             { AMC5  , 9     }
@@ -58,6 +57,12 @@ file "afc.db"
             { AMC10 , 14    }
             { AMC11 , 15    }
             { AMC12 , 16    }
+}
+
+file "afcv4.db"
+{
+    pattern { id    , fruid }
+            { AMC2  , 6     }
 }
 
 file "rtm_8sfp.db"
