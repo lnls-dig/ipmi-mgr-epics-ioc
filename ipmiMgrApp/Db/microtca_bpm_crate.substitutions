@@ -5,8 +5,11 @@
 # * 1 NAT MCH
 # * 2 WIENER PS
 # * 1 RTM CPU
+# * 1 RTM 8SFP
+# * 1 RTM LAMP
 # * 1 AFC Timing (AMC1, FRUID 5)
-# * Up to 11 AFC BPM (AMC2-12, FRUID 6-16)
+# * 1 AFC FOFB (AMC2, FRUID 6)
+# * Up to 11 AFC BPM (AMC3-12, FRUID 7-16)
 #
 
 file "system_common.db"
@@ -57,8 +60,14 @@ file "afc.db"
             { AMC12 , 16    }
 }
 
-file "rtm_timing.db"
+file "rtm_8sfp.db"
 {
     pattern { id       , fruid }
-            { RtmTim   , 90    }
+            { Rtm8sfp  , 90    }
+}
+
+file "rtm_lamp.db"
+{
+    pattern { id       , fruid }
+            { RtmLamp  , 91    }
 }

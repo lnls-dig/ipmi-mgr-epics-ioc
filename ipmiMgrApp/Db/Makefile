@@ -29,7 +29,8 @@ DB += mch_pci_hub.db
 DB += mch_nat.db
 DB += shelf.db
 DB += afc.db
-DB += rtm_timing.db
+DB += rtm_8sfp.db
+DB += rtm_lamp.db
 
 #System
 DB += microtca_bpm_crate.db
