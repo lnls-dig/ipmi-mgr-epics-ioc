@@ -1,0 +1,32 @@
+#nat>show_sensorinfo 6
+#Sensor Information for FRU 6 / AMC2
+#==================================================================
+#  #   SDRType  Sensor Entity Inst  Value   State    Name
+#------------------------------------------------------------------
+#  -   MDevLoc          0xc1  0x62                    AFC v4
+#  2   Compact  0xf2    0xc1  0x62  0x01              HOTSWAP AMC
+#  3   Full     Temp    0xc1  0x62  37 C       ok     TEMP FPGA
+#  4   Full     Temp    0xc1  0x62  24.5 C     ok     TEMP UC
+#  5   Full     Temp    0xc1  0x62  27.5 C     ok     TEMP CLK SWITCH
+#  6   Full     Temp    0xc1  0x62  35.5 C     ok     TEMP DCDC
+#  7   Full     Temp    0xc1  0x62  26.0 C     ok     TEMP RAM
+#  8   Compact  0xf0    0xc1  0x62  0x10              HS 006 AMC2
+#------------------------------------------------------------------
+
+
+
+file "fru_common.db"
+{
+    pattern { id    , fruid    }
+            { $(id) , $(fruid) }
+}
+
+file "sensor_ai.db"
+{
+    pattern { attr            , sensinst    , type    , fruid        , prefix }
+            { TempFPGA        , 1           , 1       , $(fruid)     , $(id)  }
+            { TempUC          , 2           , 1       , $(fruid)     , $(id)  }
+            { TempClkSwitch   , 3           , 1       , $(fruid)     , $(id)  }
+            { TempDCDC        , 4           , 1       , $(fruid)     , $(id)  }
+            { TempRAM         , 5           , 1       , $(fruid)     , $(id)  }
+}
