@@ -244,8 +244,8 @@ record(mbbo, "$(P)$(R)$(id)SensorScanPeriod-Sel") {
  field(FRVL, "4")
  field(FRST, "60 seconds")
  field(OUT,  "#B0 C0 N0 @$(link)+scan")
- field(VAL,  "1")
- field(RVAL, "1")
+ field(VAL,  "0")
+ field(RVAL, "0")
  field(PINI, "YES")
  info(autosaveFields,"VAL RVAL")
 }
