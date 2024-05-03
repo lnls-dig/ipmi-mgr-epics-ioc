@@ -26,14 +26,14 @@ file "system_common.db"
 file "power_module.db"
 {
     pattern { id    , fruid }
-            { PM1   , 51    }
-            { PM2   , 53    }
+            { PM2   , 51    }
+            { PM4   , 53    }
 }
 
 file "mch_nat.db"
 {
     pattern { id    }
-            { MCH1  }
+            { MCH  }
 }
 
 file "cooling_unit.db"
