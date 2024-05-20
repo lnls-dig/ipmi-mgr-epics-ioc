@@ -1,3 +1,4 @@
+#!/opt/ipmi-mgr-epics-ioc/bin/linux-x86_64/ipmiMgr
 < envPaths
 epicsEnvSet("TOP", "../..")
 

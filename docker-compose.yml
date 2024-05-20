@@ -1,0 +1,16 @@
+services:
+  ioc:
+    image: ghcr.io/lnls-dig/ipmi-mgr-epics-ioc
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+      target: static-link
+      labels:
+        org.opencontainers.image.source: https://github.com/lnls-dig/ipmi-mgr-epics-ioc
+      args:
+        REPONAME: ipmi-mgr-epics-ioc
+        RUNDIR: /opt/ipmi-mgr-epics-ioc/iocBoot/iocIpmiMgr
+    environment:
+      P: ${P}
+      R: ${R}
+      IPADDR: ${IPADDR}
