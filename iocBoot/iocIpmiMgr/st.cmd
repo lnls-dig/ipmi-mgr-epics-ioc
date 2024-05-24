@@ -1,6 +1,5 @@
 < envPaths
 epicsEnvSet("TOP", "../..")
-< IpmiMgr.config
 
 ####################################################
 
@@ -11,6 +10,7 @@ ipmiMgr_registerRecordDeviceDriver pdbbase
 var dbRecordsOnceOnly 1
 
 ## Initialize connection to MCH
+epicsEnvSet("PORT", "MCHLink")
 drvAsynIPPortConfigure ("$(PORT)","$(IPADDR):623 udp",0,0,0)
 mchInit("$(PORT)")
 
