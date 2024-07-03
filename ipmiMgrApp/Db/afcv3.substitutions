@@ -27,13 +27,13 @@
 #  19   Compact  0xf0    0xc1  0x69  0x10              HS 013 AMC9
 # ------------------------------------------------------------------
 
-file "fru_common.db"
+file "fru_common_alias.db"
 {
     pattern { id    , fruid    }
             { $(id) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr            , sensinst    , type    , fruid        , prefix }
             { FMC1Volt12V     , 1           , 2       , $(fruid)     , $(id)  }

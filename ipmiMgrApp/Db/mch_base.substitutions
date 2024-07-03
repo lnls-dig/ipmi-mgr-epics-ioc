@@ -18,23 +18,22 @@
 #  12   Compact  0xf0    0xc2  0x61  0x10              HS 003 MCMC1
 # ------------------------------------------------------------------
 
-
-file "fru_common.db"
+file "fru_common_alias.db"
 {
     pattern { id        , fruid    }
             { $(suffix) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr        , sensinst , type , fruid    , prefix }
-            { TempCPU     , 1        , 1    , $(fruid) , $(id)  }
-            { TempIO      , 2        , 1    , $(fruid) , $(id)  }
-            { VoltBA1V2   , 1        , 2    , $(fruid) , $(id)  }
-            { VoltBA1V5   , 2        , 2    , $(fruid) , $(id)  }
-            { VoltBA1V8   , 3        , 2    , $(fruid) , $(id)  }
-            { VoltBA2V5   , 4        , 2    , $(fruid) , $(id)  }
-            { VoltBA3V3   , 5        , 2    , $(fruid) , $(id)  }
-            { VoltBA12V   , 6        , 2    , $(fruid) , $(id)  }
-            { Curr        , 1        , 3    , $(fruid) , $(id)  }
+            { TempCPU     , 1        , 1    , $(fruid) , $(suffix)  }
+            { TempIO      , 2        , 1    , $(fruid) , $(suffix)  }
+            { VoltBA1V2   , 1        , 2    , $(fruid) , $(suffix)  }
+            { VoltBA1V5   , 2        , 2    , $(fruid) , $(suffix)  }
+            { VoltBA1V8   , 3        , 2    , $(fruid) , $(suffix)  }
+            { VoltBA2V5   , 4        , 2    , $(fruid) , $(suffix)  }
+            { VoltBA3V3   , 5        , 2    , $(fruid) , $(suffix)  }
+            { VoltBA12V   , 6        , 2    , $(fruid) , $(suffix)  }
+            { Curr        , 1        , 3    , $(fruid) , $(suffix)  }
 }

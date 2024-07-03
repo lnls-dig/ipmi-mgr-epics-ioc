@@ -1,0 +1,7 @@
+include "fru_cu_common.db"
+
+alias("$(dev):$(id)$(unit):FANAUTO", "$(P)$(R)$(id)AutoAdjust-Sts")
+
+alias("$(dev):$(id)$(unit):FANSPEEDSET", "$(P)$(R)$(id)FanLevel-SP")
+
+alias("$(dev):$(id)$(unit):FANLEVEL", "$(P)$(R)$(id)FanLevel-RB")

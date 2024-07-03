@@ -23,19 +23,19 @@
 #  14   Compact  0xf0    0x1e  0x62  0x10              HS 041 CU2
 # ------------------------------------------------------------------
 
-file "fru_cu_common.db"
+file "fru_cu_common_alias.db"
 {
     pattern { id    , fruid    }
             { $(id) , $(fruid) }
 }
 
-file "fru_common.db"
+file "fru_common_alias.db"
 {
     pattern { id    , fruid    }
             { $(id) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr         , sensinst    , type    , fruid    , prefix }
             { LM75Temp1    , 1           , 1       , $(fruid) , $(id)  }

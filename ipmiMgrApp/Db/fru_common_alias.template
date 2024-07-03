@@ -1,0 +1,27 @@
+include "fru_common.db"
+
+alias("$(dev):$(id)$(unit):P", "$(P)$(R)$(id)Prs-Sts")
+
+alias("$(dev):$(id)$(unit):MSTATE", "$(P)$(R)$(id)MState-Sts")
+
+alias("$(dev):$(id)$(unit):FRUID", "$(P)$(R)$(id)FruId-Cte")
+
+alias("$(dev):$(id)$(unit):BMANUF", "$(P)$(R)$(id)BoardManuf-Cte")
+
+alias("$(dev):$(id)$(unit):BPRODNAME", "$(P)$(R)$(id)BoardName-Cte")
+
+alias("$(dev):$(id)$(unit):BSN", "$(P)$(R)$(id)BoardSN-Cte")
+
+alias("$(dev):$(id)$(unit):BPARTNUMBER", "$(P)$(R)$(id)BoardPN-Cte")
+
+alias("$(dev):$(id)$(unit):PMANUF", "$(P)$(R)$(id)ProdManuf-Cte")
+
+alias("$(dev):$(id)$(unit):PPRODNAME", "$(P)$(R)$(id)ProdName-Cte")
+
+alias("$(dev):$(id)$(unit):PSN", "$(P)$(R)$(id)ProdSN-Cte")
+
+alias("$(dev):$(id)$(unit):PPARTNUMBER", "$(P)$(R)$(id)ProdPN-Cte")
+
+alias("$(dev):$(id)$(unit):POWERCTL", "$(P)$(R)$(id)PowerCtl-Sel")
+
+alias("$(dev):$(id)$(unit):PWR", "$(P)$(R)$(id)Pwr")

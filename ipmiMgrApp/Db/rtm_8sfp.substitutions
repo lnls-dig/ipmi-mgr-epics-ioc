@@ -14,13 +14,13 @@
 # 23   Compact  0xf0    0xc0  0x61  0x02              HS 090 RTM1
 # ------------------------------------------------------------------
 
-file "fru_common.db"
+file "fru_common_alias.db"
 {
    pattern { id    , fruid    }
            { $(id) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr        , sensinst , type , fruid    , prefix }
             { TempRTM1    , 1        , 1    , $(fruid) , $(id)  }
