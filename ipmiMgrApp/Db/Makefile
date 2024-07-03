@@ -27,7 +27,6 @@ DB += mch_base.db
 DB += mch_clk_switch.db
 DB += mch_pci_hub.db
 DB += mch_nat.db
-DB += shelf.db
 DB += afcv3.db
 DB += afcv4.db
 DB += rtm_8sfp.db

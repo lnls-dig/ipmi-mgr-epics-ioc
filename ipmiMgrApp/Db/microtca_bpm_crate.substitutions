@@ -17,12 +17,6 @@ file "system_common.db"
     pattern { id } { "" }
 }
 
-#file "shelf.db"
-#{
-#    pattern { id }
-#            { Shelf }
-#}
-
 file "power_module.db"
 {
     pattern { id    , fruid }
