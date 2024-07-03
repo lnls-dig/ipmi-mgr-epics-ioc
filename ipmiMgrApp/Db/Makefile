@@ -12,15 +12,13 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 
 #Base templates
-DB += sensor_ai.db
-DB += fru_common.db
-DB += fru_cu_common.db
-DB += system_common.db
+DB += sensor_ai_alias.db
+DB += fru_common_alias.db
+DB += fru_cu_common_alias.db
+DB += system_common_alias.db
 
 #Modules
 DB += cooling_unit.db
-DB += fru_basic.db
-DB += fru_extended.db
 DB += power_module.db
 DB += rtm_cpu.db
 DB += mch_base.db

@@ -17,24 +17,24 @@
 #  11   Full     Voltage 0xc2  0x64  12.30 V    ok     12V
 # ------------------------------------------------------------------
 
-file "fru_common.db"
+file "fru_common_alias.db"
 {
     pattern { id        , fruid    }
             { $(suffix) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr        , sensinst , type , fruid       , prefix }
-            { DTemp       , 1        , 1    , $(fruid)    , $(id)  }
-            { DMaxTemp    , 2        , 1    , $(fruid)    , $(id)  }
-            { STemp       , 3        , 1    , $(fruid)    , $(id)  }
-            { SMaxTemp    , 4        , 1    , $(fruid)    , $(id)  }
-            { PTemp       , 5        , 1    , $(fruid)    , $(id)  }
-            { PMaxTemp    , 6        , 1    , $(fruid)    , $(id)  }
-            { Volt0V9     , 1        , 2    , $(fruid)    , $(id)  }
-            { Volt0V9Ana  , 2        , 2    , $(fruid)    , $(id)  }
-            { Volt1V8     , 3        , 2    , $(fruid)    , $(id)  }
-            { Volt3V3     , 4        , 2    , $(fruid)    , $(id)  }
-            { Volt12V     , 5        , 2    , $(fruid)    , $(id)  }
+            { DTemp       , 1        , 1    , $(fruid)    , $(suffix)  }
+            { DMaxTemp    , 2        , 1    , $(fruid)    , $(suffix)  }
+            { STemp       , 3        , 1    , $(fruid)    , $(suffix)  }
+            { SMaxTemp    , 4        , 1    , $(fruid)    , $(suffix)  }
+            { PTemp       , 5        , 1    , $(fruid)    , $(suffix)  }
+            { PMaxTemp    , 6        , 1    , $(fruid)    , $(suffix)  }
+            { Volt0V9     , 1        , 2    , $(fruid)    , $(suffix)  }
+            { Volt0V9Ana  , 2        , 2    , $(fruid)    , $(suffix)  }
+            { Volt1V8     , 3        , 2    , $(fruid)    , $(suffix)  }
+            { Volt3V3     , 4        , 2    , $(fruid)    , $(suffix)  }
+            { Volt12V     , 5        , 2    , $(fruid)    , $(suffix)  }
 }

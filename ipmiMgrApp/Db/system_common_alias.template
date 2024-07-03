@@ -1,0 +1,17 @@
+include "system_common.db"
+
+alias("$(dev):TYPE_RAW", "$(P)$(R)$(id)MCHType-Cte")
+
+alias("$(dev):DBG", "$(P)$(R)$(id)DbgLvl-Sel")
+
+alias("$(dev):ONLNSTAT", "$(P)$(R)$(id)Online-Sts")
+
+alias("$(dev):INIT", "$(P)$(R)$(id)Init-Sts")
+
+alias("$(dev):INITBYP", "$(P)$(R)$(id)InitBypass-Cmd")
+
+alias("$(dev):CONNECT", "$(P)$(R)$(id)Connect-Cmd")
+
+alias("$(dev):RESET", "$(P)$(R)$(id)Rst-Cmd")
+
+alias("$(dev):SENSOR_SCAN_PERIOD", "$(P)$(R)$(id)SensorScanPeriod-Sel")

@@ -41,13 +41,13 @@
 #  28   Compact  0xf0    0x0a  0x62  0x10              HS 051 PM2
 # ------------------------------------------------------------------
 
-file "fru_common.db"
+file "fru_common_alias.db"
 {
     pattern { id    , fruid    }
             { $(id) , $(fruid) }
 }
 
-file "sensor_ai.db"
+file "sensor_ai_alias.db"
 {
     pattern { attr        , sensinst , type , fruid    , prefix }
             { TempCpu0    , 1        , 1    , $(fruid) , $(id)  }
@@ -76,4 +76,4 @@ file "sensor_ai.db"
             { CurrCh14    , 15       , 3    , $(fruid) , $(id)  }
             { CurrCh15    , 16       , 3    , $(fruid) , $(id)  }
             { CurrCh16    , 17       , 3    , $(fruid) , $(id)  }
- }
+}

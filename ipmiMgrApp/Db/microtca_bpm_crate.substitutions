@@ -12,9 +12,10 @@
 # * Up to 11 AFC BPM (AMC3-12, FRUID 7-16)
 #
 
-file "system_common.db"
+file "system_common_alias.db"
 {
-    pattern { id } { "" }
+    pattern { id, location }
+            { "", "" }
 }
 
 file "power_module.db"
@@ -26,7 +27,7 @@ file "power_module.db"
 
 file "mch_nat.db"
 {
-    pattern { id    }
+    pattern { id   }
             { MCH  }
 }
 
