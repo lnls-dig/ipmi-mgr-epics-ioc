@@ -42,7 +42,7 @@ file "sensor_ai_alias.db"
             { LM75Temp2    , 2           , 1       , $(fruid) , $(id)  }
             { 3V3          , 1           , 2       , $(fruid) , $(id)  }
             { 12V          , 2           , 2       , $(fruid) , $(id)  }
-            { 12V          , 3           , 2       , $(fruid) , $(id)  }
+            { 12V_1        , 3           , 2       , $(fruid) , $(id)  }
             { Fan1         , 1           , 4       , $(fruid) , $(id)  }
             { Fan2         , 2           , 4       , $(fruid) , $(id)  }
             { Fan3         , 3           , 4       , $(fruid) , $(id)  }
