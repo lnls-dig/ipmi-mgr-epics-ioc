@@ -8,6 +8,8 @@ epicsEnvSet("TOP", "../..")
 dbLoadDatabase("$(TOP)/dbd/ipmiMgr.dbd",0,0)
 ipmiMgr_registerRecordDeviceDriver pdbbase
 
+var dbRecordsOnceOnly 1
+
 ## Initialize connection to MCH
 drvAsynIPPortConfigure ("$(PORT)","$(IPADDR):623 udp",0,0,0)
 mchInit("$(PORT)")
