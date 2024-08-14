@@ -33,6 +33,12 @@ file "fru_common_alias.db"
             { $(id) , $(fruid) }
 }
 
+file "power_mngr.db"
+{
+    pattern { id    , power_channel }
+            { $(id) , $(power_channel) }
+}
+
 file "sensor_ai_alias.db"
 {
     pattern { attr            , sensinst    , type    , fruid        , prefix }
