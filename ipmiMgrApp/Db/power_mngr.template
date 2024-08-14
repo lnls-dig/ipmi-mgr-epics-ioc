@@ -1,0 +1,1 @@
+alias("$(P)$(R)PM2CurrCh$(power_channel)-Mon", "$(P)$(R)$(id)Pwr")

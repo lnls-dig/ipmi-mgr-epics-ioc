@@ -23,5 +23,3 @@ alias("$(dev):$(id)$(unit):PSN", "$(P)$(R)$(id)ProdSN-Cte")
 alias("$(dev):$(id)$(unit):PPARTNUMBER", "$(P)$(R)$(id)ProdPN-Cte")
 
 alias("$(dev):$(id)$(unit):POWERCTL", "$(P)$(R)$(id)PowerCtl-Sel")
-
-alias("$(dev):$(id)$(unit):PWR", "$(P)$(R)$(id)Pwr")

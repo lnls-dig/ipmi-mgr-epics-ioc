@@ -27,37 +27,37 @@ file "power_module.db"
 
 file "mch_nat.db"
 {
-    pattern { id   }
-            { MCH  }
+    pattern { id   , power_channel}
+            { MCH  , 01}
 }
 
 file "cooling_unit.db"
 {
-    pattern { id    , fruid }
-            { CUTop , 40    }
-            { CUBot , 41    }
+    pattern { id    , fruid, power_channel }
+            { CUTop , 40   , 03}
+            { CUBot , 41   , 04}
 }
 
 file "afcv3.db"
 {
-    pattern { id    , fruid }
-            { AMC1  , 5     }
-            { AMC3  , 7     }
-            { AMC4  , 8     }
-            { AMC5  , 9     }
-            { AMC6  , 10    }
-            { AMC7  , 11    }
-            { AMC8  , 12    }
-            { AMC9  , 13    }
-            { AMC10 , 14    }
-            { AMC11 , 15    }
-            { AMC12 , 16    }
+    pattern { id    , fruid, power_channel }
+            { AMC1  , 5    , 05}
+            { AMC3  , 7    , 07}
+            { AMC4  , 8    , 08}
+            { AMC5  , 9    , 09}
+            { AMC6  , 10   , 10}
+            { AMC7  , 11   , 11}
+            { AMC8  , 12   , 12}
+            { AMC9  , 13   , 13}
+            { AMC10 , 14   , 14}
+            { AMC11 , 15   , 15}
+            { AMC12 , 16   , 16}
 }
 
 file "afcv4.db"
 {
-    pattern { id    , fruid }
-            { AMC2  , 6     }
+    pattern { id    , fruid, power_channel }
+            { AMC2  , 6    , 06}
 }
 
 file "rtm_8sfp.db"
