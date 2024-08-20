@@ -34,6 +34,7 @@ DB += rtm_lamp.db
 #System
 DB += microtca_bpm_crate.db
 
+DB_INSTALLS += $(ASYN)/db/asynRecord.db
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>
