@@ -14,16 +14,3 @@ iocBoot_DEPEND_DIRS += $(filter %App,$(DIRS))
 
 include $(TOP)/configure/RULES_TOP
 
-
-
-install:
-	$(MAKE) -C install install
-.PHONY: install
-
-uninstall:
-	$(MAKE) -C install uninstall
-.PHONY: uninstall
-
-realuninstall:
-	$(MAKE) -C install realuninstall
-.PHONY: realuninstall
