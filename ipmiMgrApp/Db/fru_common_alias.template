@@ -21,3 +21,37 @@ alias("$(dev):$(id)$(unit):PSN", "$(P)$(R)$(id)ProdSN-Cte")
 alias("$(dev):$(id)$(unit):PPARTNUMBER", "$(P)$(R)$(id)ProdPN-Cte")
 
 alias("$(dev):$(id)$(unit):POWERCTL", "$(P)$(R)$(id)PowerCtl-Sel")
+
+record(sseq, "$(P)$(R)$(id)SoftRst-Cmd") {
+  field(DESC, "Power cycle system")
+  field(SELM, "All")
+  field(PINI, "NO")
+  #Set 'Restarting' State
+  field(LNK1, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(DO1, "1")
+  field(WAIT1, "Wait")
+  #Send a shutdown command
+  field(LNK2, "$(P)$(R)$(id)PowerCtl-Sel CA")
+  field(DO2, "0")
+  field(WAIT2, "Wait")
+  #Set 'Waiting for Power On' state
+  field(LNK3, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(DO3, "2")
+  field(WAIT3, "Wait")
+  #After 15 seconds, send a start command
+  field(DLY4, "15")
+  field(LNK4, "$(P)$(R)$(id)PowerCtl-Sel CA")
+  field(DO4, "1")
+  field(WAIT4, "Wait")
+  #After 15 seconds, set 'Idle' state
+  field(DLY5, "15")
+  field(LNK5, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(DO5, "0")
+  field(WAIT5, "Wait")
+}
+record(mbbo, "$(P)$(R)$(id)SoftRstSts-Mon") {
+  field(DESC, "Fru Power State")
+  field(ZRST, "Idle")
+  field(ONST, "Restarting")
+  field(TWST, "Waiting for Power On")
+}
