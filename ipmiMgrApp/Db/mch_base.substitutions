@@ -20,20 +20,20 @@
 
 file "fru_common_alias.db"
 {
-    pattern { id        , fruid    }
-            { $(suffix) , $(fruid) }
+    pattern { dev   , fruid    }
+            { $(dev), $(fruid) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr        , sensinst , type , fruid    , prefix      , aliasprefix  }
-            { TempCPU     , 1        , 1    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { TempIO      , 2        , 1    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA1V2   , 1        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA1V5   , 2        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA1V8   , 3        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA2V5   , 4        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA3V3   , 5        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { VoltBA12V   , 6        , 2    , $(fruid) , $(suffix)   , alias_$(suffix)    }
-            { Curr        , 1        , 3    , $(fruid) , $(suffix)   , alias_$(suffix)    }
+    pattern { attr        , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempCPU    , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempIO     , 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase1V2, 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase1V5, 2       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase1V8, 3       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase2V5, 4       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase3V3, 5       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltBase12V, 6       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { CurrBase   , 1       , 3   , $(fruid), alias_$(dev), $(dev) }
 }

@@ -25,28 +25,28 @@
 
 file "fru_common_alias.db"
 {
-    pattern { id    , fruid    }
-            { $(id) , $(fruid) }
+    pattern { dev   , fruid    }
+            { $(dev), $(fruid) }
 }
 
 file "power_mngr.db"
 {
-    pattern { id    , power_channel }
-            { $(id) , $(power_channel) }
+    pattern { dev   , power_channel    }
+            { $(dev), $(power_channel) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr         , sensinst    , type    , fruid    , prefix   , aliasprefix }
-            { LM75Temp1    , 1           , 1       , $(fruid) , $(id)    , alias_$(id)       }
-            { LM75Temp2    , 2           , 1       , $(fruid) , $(id)    , alias_$(id)       }
-            { 3V3          , 1           , 2       , $(fruid) , $(id)    , alias_$(id)       }
-            { 12V          , 2           , 2       , $(fruid) , $(id)    , alias_$(id)       }
-            { 12V_1        , 3           , 2       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan1         , 1           , 4       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan2         , 2           , 4       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan3         , 3           , 4       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan4         , 4           , 4       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan5         , 5           , 4       , $(fruid) , $(id)    , alias_$(id)       }
-            { Fan6         , 6           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+    pattern { attr      , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempLM75  , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempLM75_2, 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { Volt3V3   , 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12V   , 2       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12V_1 , 3       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { SFan1     , 1       , 4   , $(fruid), alias_$(dev), $(dev) }
+            { SFan2     , 2       , 4   , $(fruid), alias_$(dev), $(dev) }
+            { SFan3     , 3       , 4   , $(fruid), alias_$(dev), $(dev) }
+            { SFan4     , 4       , 4   , $(fruid), alias_$(dev), $(dev) }
+            { SFan5     , 5       , 4   , $(fruid), alias_$(dev), $(dev) }
+            { SFan6     , 6       , 4   , $(fruid), alias_$(dev), $(dev) }
 }

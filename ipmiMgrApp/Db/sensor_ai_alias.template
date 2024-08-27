@@ -1,5 +1,4 @@
 include "sensor_ai.db"
 
-alias("$(dev):$(prefix)$(attr)$(sensinst)", "$(P)$(R)$(prefix)$(attr)-Mon")
-
-alias("$(dev):$(prefix)$(attr)$(sensinst)P", "$(P)$(R)$(prefix)$(attr)Prs-Sts")
+alias("$(dev):$(prefix)$(attr)$(sensinst)", "$(AREA)$(DIS)$(dev):$(attr)-Mon")
+alias("$(dev):$(prefix)$(attr)$(sensinst)P", "$(AREA)$(DIS)$(dev):$(attr)Prs-Cte")

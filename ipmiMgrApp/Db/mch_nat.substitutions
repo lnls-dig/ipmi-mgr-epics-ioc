@@ -26,24 +26,24 @@
 
 file "mch_base.db"
 {
-    pattern { suffix       , fruid }
-            { $(id)Base    , 3     }
+    pattern { dev        , fruid }
+            { $(dev)_Base, 3     }
 }
 
 file "mch_clk_switch.db"
 {
-    pattern { suffix       , fruid }
-            { $(id)ClkSw   , 60    }
+    pattern { dev         , fruid }
+            { $(dev)_ClkSw, 60    }
 }
 
 file "mch_pci_hub.db"
 {
-    pattern { suffix       , fruid }
-            { $(id)PciHub  , 61    }
+    pattern { dev           , fruid }
+            { $(dev)_PCI_Hub, 61    }
 }
 
 file "rtm_cpu.db"
 {
-    pattern { suffix       , fruid }
-            { $(id)RtmCpu  , 64    }
+    pattern { dev           , fruid }
+            { $(dev)_RTM_CPU, 64    }
 }

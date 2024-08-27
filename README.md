@@ -6,6 +6,7 @@ Status](https://github.com/lnls-dig/ipmi-mgr-epics-ioc/actions/workflows/build.y
 This repository contains the EPICS Input/Output Controller (IOC) used at LNLS
 for managing uTCA crates, based on
 [ipmiComm](https://github.com/slac-epics-modules/ipmiComm) support module.
+The available PVs are listed [here](PVList.md).
 
 ## Running the IOC
 
