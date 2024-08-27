@@ -14,17 +14,17 @@
 
 file "fru_common_alias.db"
 {
-    pattern { id        , fruid    }
-            { $(suffix) , $(fruid) }
+    pattern { dev   , fruid    }
+            { $(dev), $(fruid) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr       , sensinst , type , fruid       , prefix       , aliasprefix }
-            { DTemp      , 1        , 1    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
-            { DMaxTemp   , 2        , 1    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
-            { MTemp      , 3        , 1    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
-            { MMaxTemp   , 4        , 1    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
-            { Volt3V3    , 1        , 2    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
-            { Volt12V    , 2        , 2    , $(fruid)    , $(suffix)    , alias_$(suffix)   }
+    pattern { attr       , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempDCDC   , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempDCDCMax, 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempMux    , 3       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempMuxMax , 4       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { Volt3V3    , 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12V    , 2       , 2   , $(fruid), alias_$(dev), $(dev) }
 }

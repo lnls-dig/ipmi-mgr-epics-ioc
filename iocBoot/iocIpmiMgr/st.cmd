@@ -16,8 +16,8 @@ drvAsynIPPortConfigure ("$(PORT)","$(IPADDR):623 udp",0,0,0)
 mchInit("$(PORT)")
 
 ## Load record instances
-dbLoadRecords("$(TOP)/db/asynRecord.db","P=${P}, R=${R}:asyn,PORT=$(PORT),ADDR=0,OMAX=80,IMAX=80")
-dbLoadRecords("${TOP}/db/microtca_bpm_crate.db", "link=$(PORT),P=$(P),R=$(R):,dev=$(P)$(R),unit=''")
+dbLoadRecords("$(TOP)/db/asynRecord.db","P=${AREA}:, R=CO-MCH_Base:asyn,PORT=$(PORT),ADDR=0,OMAX=80,IMAX=80")
+dbLoadRecords("${TOP}/db/microtca_bpm_crate.db", "link=$(PORT),AREA=$(AREA):,DIS='CO-',id='',prefix='',unit=''")
 
 # < save_restore.cmd
 

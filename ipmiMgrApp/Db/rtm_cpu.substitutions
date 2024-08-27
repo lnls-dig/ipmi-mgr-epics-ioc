@@ -26,24 +26,24 @@
 
 file "fru_common_alias.db"
 {
-    pattern { id        , fruid    }
-            { $(suffix) , $(fruid) }
+    pattern { dev   , fruid    }
+            { $(dev), $(fruid) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr            , sensinst , type , fruid    , prefix    , aliasprefix}
-            { PcbTemp         , 1        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { PcbMaxTemp      , 2        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { DcDcTemp        , 3        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { DcDcMaxTemp     , 4        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { ComExCpuTemp    , 5        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { ComExPchTemp    , 6        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { ComExDdrTemp    , 7        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { 1V0             , 1        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { 1V8             , 2        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { 3V3             , 3        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { 5V              , 4        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { VBAT            , 5        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
-            { Int12V          , 6        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+    pattern { attr        , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempPCB     , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempPCBMax  , 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempDCDC    , 3       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempDCDCMax , 4       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempComExCPU, 5       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempComExPCH, 6       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempComExDDR, 7       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { Volt1V0     , 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt1V8     , 2       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt3V3     , 3       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt5V      , 4       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltVBAT    , 5       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12VInt  , 6       , 2   , $(fruid), alias_$(dev), $(dev) }
 }

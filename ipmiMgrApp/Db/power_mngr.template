@@ -1,1 +1,1 @@
-alias("$(P)$(R)PM2CurrCh$(power_channel)-Mon", "$(P)$(R)$(id)Pwr")
+alias("$(AREA)$(DIS)PM-2:CurrCh$(power_channel)-Mon", "$(AREA)$(DIS)$(dev):Pwr-Mon")

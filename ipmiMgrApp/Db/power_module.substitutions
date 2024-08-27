@@ -43,37 +43,37 @@
 
 file "fru_common_alias.db"
 {
-    pattern { id    , fruid    }
-            { $(id) , $(fruid) }
+    pattern { dev   , fruid    }
+            { $(dev), $(fruid) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr        , sensinst , type , fruid    , prefix  , aliasprefix  }
-            { TempCpu0    , 1        , 1    , $(fruid) , $(id)   , alias_$(id)        }
-            { TempPath    , 2        , 1    , $(fruid) , $(id)   , alias_$(id)        }
-            { TempCool    , 3        , 1    , $(fruid) , $(id)   , alias_$(id)        }
-            { TempTraf    , 4        , 1    , $(fruid) , $(id)   , alias_$(id)        }
-            { VoltMP00V   , 1        , 2    , $(fruid) , $(id)   , alias_$(id)        }
-            { VoltSMP0V   , 2        , 2    , $(fruid) , $(id)   , alias_$(id)        }
-            { VoltSMPPV   , 3        , 2    , $(fruid) , $(id)   , alias_$(id)        }
-            { VoltPP00V   , 4        , 2    , $(fruid) , $(id)   , alias_$(id)        }
-            { Volt12HHV   , 5        , 2    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrSum     , 1        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh01    , 2        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh02    , 3        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh03    , 4        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh04    , 5        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh05    , 6        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh06    , 7        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh07    , 8        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh08    , 9        , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh09    , 10       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh10    , 11       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh11    , 12       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh12    , 13       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh13    , 14       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh14    , 15       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh15    , 16       , 3    , $(fruid) , $(id)   , alias_$(id)        }
-            { CurrCh16    , 17       , 3    , $(fruid) , $(id)   , alias_$(id)        }
+    pattern { attr       , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempDCDC  , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempPath  , 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempCooler, 3       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempTrafo , 4       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { VoltMP    , 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltSMP   , 2       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltSMPP  , 3       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltPP    , 4       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12VHHV, 5       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { CurrSum   , 1       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh01  , 2       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh02  , 3       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh03  , 4       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh04  , 5       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh05  , 6       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh06  , 7       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh07  , 8       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh08  , 9       , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh09  , 10      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh10  , 11      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh11  , 12      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh12  , 13      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh13  , 14      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh14  , 15      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh15  , 16      , 3   , $(fruid), alias_$(dev), $(dev) }
+            { CurrCh16  , 17      , 3   , $(fruid), alias_$(dev), $(dev) }
 }

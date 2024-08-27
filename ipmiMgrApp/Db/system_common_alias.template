@@ -1,17 +1,10 @@
 include "system_common.db"
 
-alias("$(dev):TYPE_RAW", "$(P)$(R)$(id)MCHType-Cte")
-
-alias("$(dev):DBG", "$(P)$(R)$(id)DbgLvl-Sel")
-
-alias("$(dev):ONLNSTAT", "$(P)$(R)$(id)Online-Sts")
-
-alias("$(dev):INIT", "$(P)$(R)$(id)Init-Sts")
-
-alias("$(dev):INITBYP", "$(P)$(R)$(id)InitBypass-Cmd")
-
-alias("$(dev):CONNECT", "$(P)$(R)$(id)Connect-Cmd")
-
-alias("$(dev):RESET", "$(P)$(R)$(id)Rst-Cmd")
-
-alias("$(dev):SENSOR_SCAN_PERIOD", "$(P)$(R)$(id)SensorScanPeriod-Sel")
+alias("$(dev):TYPE_RAW", "$(AREA)$(DIS)$(dev):MCHType-Cte")
+alias("$(dev):DBG", "$(AREA)$(DIS)$(dev):DbgLvl-Sel")
+alias("$(dev):ONLNSTAT", "$(AREA)$(DIS)$(dev):Online-Mon")
+alias("$(dev):INIT", "$(AREA)$(DIS)$(dev):Init-Mon")
+alias("$(dev):INITBYP", "$(AREA)$(DIS)$(dev):InitBypass-Cmd")
+alias("$(dev):CONNECT", "$(AREA)$(DIS)$(dev):Connect-Cmd")
+alias("$(dev):RESET", "$(AREA)$(DIS)$(dev):Rst-Cmd")
+alias("$(dev):SENSOR_SCAN_PERIOD", "$(AREA)$(DIS)$(dev):SensorScanPeriod-Sel")

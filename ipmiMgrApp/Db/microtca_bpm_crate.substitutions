@@ -14,60 +14,60 @@
 
 file "system_common_alias.db"
 {
-    pattern { id, location }
-            { "", "" }
+    pattern { dev  , location }
+            { Crate, $(AREA)  }
 }
 
 file "power_module.db"
 {
-    pattern { id    , fruid }
-            { PM2   , 51    }
-            { PM4   , 53    }
+    pattern { dev , fruid }
+            { PM-2, 51    }
+            { PM-4, 53    }
 }
 
 file "mch_nat.db"
 {
-    pattern { id   , power_channel}
-            { MCH  , 01}
+    pattern { dev, power_channel }
+            { MCH, 01            }
 }
 
 file "cooling_unit.db"
 {
-    pattern { id    , fruid, power_channel }
-            { CUTop , 40   , 03}
-            { CUBot , 41   , 04}
+    pattern { dev   , fruid, power_channel }
+            { CUTop, 40   , 03            }
+            { CUBot, 41   , 04            }
 }
 
 file "afcv3.db"
 {
-    pattern { id    , fruid, power_channel }
-            { AMC1  , 5    , 05}
-            { AMC3  , 7    , 07}
-            { AMC4  , 8    , 08}
-            { AMC5  , 9    , 09}
-            { AMC6  , 10   , 10}
-            { AMC7  , 11   , 11}
-            { AMC8  , 12   , 12}
-            { AMC9  , 13   , 13}
-            { AMC10 , 14   , 14}
-            { AMC11 , 15   , 15}
-            { AMC12 , 16   , 16}
+    pattern { dev   , fruid, power_channel }
+            { AMC-1 , 5    , 05            }
+            { AMC-3 , 7    , 07            }
+            { AMC-4 , 8    , 08            }
+            { AMC-5 , 9    , 09            }
+            { AMC-6 , 10   , 10            }
+            { AMC-7 , 11   , 11            }
+            { AMC-8 , 12   , 12            }
+            { AMC-9 , 13   , 13            }
+            { AMC-10, 14   , 14            }
+            { AMC-11, 15   , 15            }
+            { AMC-12, 16   , 16            }
 }
 
 file "afcv4.db"
 {
-    pattern { id    , fruid, power_channel }
-            { AMC2  , 6    , 06}
+    pattern { dev  , fruid, power_channel }
+            { AMC-2, 6    , 06            }
 }
 
 file "rtm_8sfp.db"
 {
-    pattern { id       , fruid }
-            { Rtm8sfp  , 90    }
+    pattern { dev     , fruid }
+            { RTM_8SFP, 90    }
 }
 
 file "rtm_lamp.db"
 {
-    pattern { id       , fruid }
-            { RtmLamp  , 91    }
+    pattern { dev     , fruid }
+            { RTM_LAMP, 91    }
 }

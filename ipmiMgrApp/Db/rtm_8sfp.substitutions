@@ -16,13 +16,13 @@
 
 file "fru_common_alias.db"
 {
-   pattern { id    , fruid    }
-           { $(id) , $(fruid) }
+   pattern { dev   , fruid    }
+           { $(dev), $(fruid) }
 }
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr        , sensinst , type , fruid    , prefix  , aliasprefix  }
-            { TempRTM1    , 1        , 1    , $(fruid) , $(id)   , alias_$(id)        }
-            { TempRTM2    , 2        , 1    , $(fruid) , $(id)   , alias_$(id)        }
+    pattern { attr    , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempRTM1, 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempRTM2, 2       , 1   , $(fruid), alias_$(dev), $(dev) }
 }

@@ -11,6 +11,5 @@ services:
         REPONAME: ipmi-mgr-epics-ioc
         RUNDIR: /opt/ipmi-mgr-epics-ioc/iocBoot/iocIpmiMgr
     environment:
-      P: ${P}
-      R: ${R}
+      AREA: ${AREA}
       IPADDR: ${IPADDR}

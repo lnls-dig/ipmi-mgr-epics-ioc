@@ -1,55 +1,45 @@
 include "fru_common.db"
 
-alias("$(dev):$(id)$(unit):P", "$(P)$(R)$(id)Prs-Sts")
+alias("$(dev):$(id)$(unit):P", "$(AREA)$(DIS)$(dev):Status-Cte")
+alias("$(dev):$(id)$(unit):FRUID", "$(AREA)$(DIS)$(dev):FruId-Cte")
+alias("$(dev):$(id)$(unit):BMANUF", "$(AREA)$(DIS)$(dev):BoardManuf-Cte")
+alias("$(dev):$(id)$(unit):BPRODNAME", "$(AREA)$(DIS)$(dev):BoardName-Cte")
+alias("$(dev):$(id)$(unit):BSN", "$(AREA)$(DIS)$(dev):BoardSN-Cte")
+alias("$(dev):$(id)$(unit):BPARTNUMBER", "$(AREA)$(DIS)$(dev):BoardPN-Cte")
+alias("$(dev):$(id)$(unit):PMANUF", "$(AREA)$(DIS)$(dev):ProdManuf-Cte")
+alias("$(dev):$(id)$(unit):PPRODNAME", "$(AREA)$(DIS)$(dev):ProdName-Cte")
+alias("$(dev):$(id)$(unit):PSN", "$(AREA)$(DIS)$(dev):ProdSN-Cte")
+alias("$(dev):$(id)$(unit):PPARTNUMBER", "$(AREA)$(DIS)$(dev):ProdPN-Cte")
+alias("$(dev):$(id)$(unit):POWERCTL", "$(AREA)$(DIS)$(dev):PowerCtl-Sel")
 
-alias("$(dev):$(id)$(unit):FRUID", "$(P)$(R)$(id)FruId-Cte")
-
-alias("$(dev):$(id)$(unit):BMANUF", "$(P)$(R)$(id)BoardManuf-Cte")
-
-alias("$(dev):$(id)$(unit):BPRODNAME", "$(P)$(R)$(id)BoardName-Cte")
-
-alias("$(dev):$(id)$(unit):BSN", "$(P)$(R)$(id)BoardSN-Cte")
-
-alias("$(dev):$(id)$(unit):BPARTNUMBER", "$(P)$(R)$(id)BoardPN-Cte")
-
-alias("$(dev):$(id)$(unit):PMANUF", "$(P)$(R)$(id)ProdManuf-Cte")
-
-alias("$(dev):$(id)$(unit):PPRODNAME", "$(P)$(R)$(id)ProdName-Cte")
-
-alias("$(dev):$(id)$(unit):PSN", "$(P)$(R)$(id)ProdSN-Cte")
-
-alias("$(dev):$(id)$(unit):PPARTNUMBER", "$(P)$(R)$(id)ProdPN-Cte")
-
-alias("$(dev):$(id)$(unit):POWERCTL", "$(P)$(R)$(id)PowerCtl-Sel")
-
-record(sseq, "$(P)$(R)$(id)SoftRst-Cmd") {
+record(sseq, "$(AREA)$(DIS)$(dev):SoftRst-Cmd") {
   field(DESC, "Power cycle system")
   field(SELM, "All")
   field(PINI, "NO")
   #Set 'Restarting' State
-  field(LNK1, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(LNK1, "$(AREA)$(DIS)$(dev):SoftRstSts-Mon CA")
   field(DO1, "1")
   field(WAIT1, "Wait")
   #Send a shutdown command
-  field(LNK2, "$(P)$(R)$(id)PowerCtl-Sel CA")
+  field(LNK2, "$(AREA)$(DIS)$(dev):PowerCtl-Sel CA")
   field(DO2, "0")
   field(WAIT2, "Wait")
   #Set 'Waiting for Power On' state
-  field(LNK3, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(LNK3, "$(AREA)$(DIS)$(dev):SoftRstSts-Mon CA")
   field(DO3, "2")
   field(WAIT3, "Wait")
   #After 15 seconds, send a start command
   field(DLY4, "15")
-  field(LNK4, "$(P)$(R)$(id)PowerCtl-Sel CA")
+  field(LNK4, "$(AREA)$(DIS)$(dev):PowerCtl-Sel CA")
   field(DO4, "1")
   field(WAIT4, "Wait")
   #After 15 seconds, set 'Idle' state
   field(DLY5, "15")
-  field(LNK5, "$(P)$(R)$(id)SoftRstSts-Mon CA")
+  field(LNK5, "$(AREA)$(DIS)$(dev):SoftRstSts-Mon CA")
   field(DO5, "0")
   field(WAIT5, "Wait")
 }
-record(mbbo, "$(P)$(R)$(id)SoftRstSts-Mon") {
+record(mbbo, "$(AREA)$(DIS)$(dev):SoftRstSts-Mon") {
   field(DESC, "Fru Power State")
   field(ZRST, "Idle")
   field(ONST, "Restarting")
