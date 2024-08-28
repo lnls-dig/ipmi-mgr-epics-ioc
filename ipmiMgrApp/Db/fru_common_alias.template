@@ -2,8 +2,6 @@ include "fru_common.db"
 
 alias("$(dev):$(id)$(unit):P", "$(P)$(R)$(id)Prs-Sts")
 
-alias("$(dev):$(id)$(unit):MSTATE", "$(P)$(R)$(id)MState-Sts")
-
 alias("$(dev):$(id)$(unit):FRUID", "$(P)$(R)$(id)FruId-Cte")
 
 alias("$(dev):$(id)$(unit):BMANUF", "$(P)$(R)$(id)BoardManuf-Cte")
