@@ -1,6 +1,6 @@
 services:
   ioc:
-    image: ghcr.io/lnls-dig/ipmi-mgr-epics-ioc
+    image: ghcr.io/lnls-dig/ipmi-mgr-epics-ioc:${TAG}
     build:
       context: ./
       dockerfile: docker/Dockerfile
