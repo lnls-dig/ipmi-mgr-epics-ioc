@@ -43,16 +43,16 @@ file "power_mngr.db"
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr         , sensinst    , type    , fruid    , prefix }
-            { LM75Temp1    , 1           , 1       , $(fruid) , $(id)  }
-            { LM75Temp2    , 2           , 1       , $(fruid) , $(id)  }
-            { 3V3          , 1           , 2       , $(fruid) , $(id)  }
-            { 12V          , 2           , 2       , $(fruid) , $(id)  }
-            { 12V_1        , 3           , 2       , $(fruid) , $(id)  }
-            { Fan1         , 1           , 4       , $(fruid) , $(id)  }
-            { Fan2         , 2           , 4       , $(fruid) , $(id)  }
-            { Fan3         , 3           , 4       , $(fruid) , $(id)  }
-            { Fan4         , 4           , 4       , $(fruid) , $(id)  }
-            { Fan5         , 5           , 4       , $(fruid) , $(id)  }
-            { Fan6         , 6           , 4       , $(fruid) , $(id)  }
+    pattern { attr         , sensinst    , type    , fruid    , prefix   , aliasprefix }
+            { LM75Temp1    , 1           , 1       , $(fruid) , $(id)    , alias_$(id)       }
+            { LM75Temp2    , 2           , 1       , $(fruid) , $(id)    , alias_$(id)       }
+            { 3V3          , 1           , 2       , $(fruid) , $(id)    , alias_$(id)       }
+            { 12V          , 2           , 2       , $(fruid) , $(id)    , alias_$(id)       }
+            { 12V_1        , 3           , 2       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan1         , 1           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan2         , 2           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan3         , 3           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan4         , 4           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan5         , 5           , 4       , $(fruid) , $(id)    , alias_$(id)       }
+            { Fan6         , 6           , 4       , $(fruid) , $(id)    , alias_$(id)       }
 }
