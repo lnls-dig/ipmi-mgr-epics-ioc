@@ -32,18 +32,18 @@ file "fru_common_alias.db"
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr            , sensinst , type , fruid    , prefix }
-            { PcbTemp         , 1        , 1    , $(fruid) , $(suffix)  }
-            { PcbMaxTemp      , 2        , 1    , $(fruid) , $(suffix)  }
-            { DcDcTemp        , 3        , 1    , $(fruid) , $(suffix)  }
-            { DcDcMaxTemp     , 4        , 1    , $(fruid) , $(suffix)  }
-            { ComExCpuTemp    , 5        , 1    , $(fruid) , $(suffix)  }
-            { ComExPchTemp    , 6        , 1    , $(fruid) , $(suffix)  }
-            { ComExDdrTemp    , 7        , 1    , $(fruid) , $(suffix)  }
-            { 1V0             , 1        , 2    , $(fruid) , $(suffix)  }
-            { 1V8             , 2        , 2    , $(fruid) , $(suffix)  }
-            { 3V3             , 3        , 2    , $(fruid) , $(suffix)  }
-            { 5V              , 4        , 2    , $(fruid) , $(suffix)  }
-            { VBAT            , 5        , 2    , $(fruid) , $(suffix)  }
-            { Int12V          , 6        , 2    , $(fruid) , $(suffix)  }
+    pattern { attr            , sensinst , type , fruid    , prefix    , aliasprefix}
+            { PcbTemp         , 1        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { PcbMaxTemp      , 2        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { DcDcTemp        , 3        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { DcDcMaxTemp     , 4        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { ComExCpuTemp    , 5        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { ComExPchTemp    , 6        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { ComExDdrTemp    , 7        , 1    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { 1V0             , 1        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { 1V8             , 2        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { 3V3             , 3        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { 5V              , 4        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { VBAT            , 5        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
+            { Int12V          , 6        , 2    , $(fruid) , $(suffix) , alias_$(suffix) }
 }

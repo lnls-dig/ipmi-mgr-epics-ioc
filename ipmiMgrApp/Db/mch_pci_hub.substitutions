@@ -25,16 +25,16 @@ file "fru_common_alias.db"
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr        , sensinst , type , fruid       , prefix }
-            { DTemp       , 1        , 1    , $(fruid)    , $(suffix)  }
-            { DMaxTemp    , 2        , 1    , $(fruid)    , $(suffix)  }
-            { STemp       , 3        , 1    , $(fruid)    , $(suffix)  }
-            { SMaxTemp    , 4        , 1    , $(fruid)    , $(suffix)  }
-            { PTemp       , 5        , 1    , $(fruid)    , $(suffix)  }
-            { PMaxTemp    , 6        , 1    , $(fruid)    , $(suffix)  }
-            { Volt0V9     , 1        , 2    , $(fruid)    , $(suffix)  }
-            { Volt0V9Ana  , 2        , 2    , $(fruid)    , $(suffix)  }
-            { Volt1V8     , 3        , 2    , $(fruid)    , $(suffix)  }
-            { Volt3V3     , 4        , 2    , $(fruid)    , $(suffix)  }
-            { Volt12V     , 5        , 2    , $(fruid)    , $(suffix)  }
+    pattern { attr        , sensinst , type , fruid       , prefix     , aliasprefix  }
+            { DTemp       , 1        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { DMaxTemp    , 2        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { STemp       , 3        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { SMaxTemp    , 4        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { PTemp       , 5        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { PMaxTemp    , 6        , 1    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { Volt0V9     , 1        , 2    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { Volt0V9Ana  , 2        , 2    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { Volt1V8     , 3        , 2    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { Volt3V3     , 4        , 2    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
+            { Volt12V     , 5        , 2    , $(fruid)    , $(suffix)  , alias_$(suffix)    }
 }

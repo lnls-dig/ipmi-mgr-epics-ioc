@@ -22,7 +22,7 @@ file "fru_common_alias.db"
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr        , sensinst , type , fruid    , prefix }
-            { TempRTM1    , 1        , 1    , $(fruid) , $(id)  }
-            { TempRTM2    , 2        , 1    , $(fruid) , $(id)  }
+    pattern { attr        , sensinst , type , fruid    , prefix  , aliasprefix  }
+            { TempRTM1    , 1        , 1    , $(fruid) , $(id)   , alias_$(id)        }
+            { TempRTM2    , 2        , 1    , $(fruid) , $(id)   , alias_$(id)        }
 }
