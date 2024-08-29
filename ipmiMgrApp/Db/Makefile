@@ -14,7 +14,6 @@ include $(TOP)/configure/CONFIG
 #Base templates
 DB += sensor_ai_alias.db
 DB += fru_common_alias.db
-DB += fru_cu_common_alias.db
 DB += system_common_alias.db
 DB += power_mngr.db
 
