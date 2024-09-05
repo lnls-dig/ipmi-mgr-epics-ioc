@@ -15,12 +15,14 @@ DBD += ipmiMgr.dbd
 # ipmiMgr.dbd will be made up from these files:
 ipmiMgr_DBD += base.dbd
 ipmiMgr_DBD += asyn.dbd
+ipmiMgr_DBD += sseqRecord.dbd
 ipmiMgr_DBD += drvAsynIPPort.dbd
 ipmiMgr_DBD += iocAdmin.dbd
 ipmiMgr_DBD += ipmiComm.dbd
 
 # Add all the support libraries needed by this IOC
 ipmiMgr_LIBS += asyn
+ipmiMgr_LIBS += calc
 ipmiMgr_LIBS += devIocStats
 ipmiMgr_LIBS += ipmiComm
 
