@@ -27,8 +27,8 @@ file "power_module.db"
 
 file "mch_nat.db"
 {
-    pattern { dev, power_channel }
-            { MCH, 01            }
+    pattern { pre_dev, power_channel }
+            { MCH    , 01            }
 }
 
 file "cooling_unit.db"
