@@ -7,12 +7,20 @@
 #==================================================================
 #  #   SDRType  Sensor Entity Inst  Value   State    Name
 #------------------------------------------------------------------
-#  -   MDevLoc          0xc0  0x62                    AFC v4-RTM
-#  8   Compact  0xf2    0xc0  0x62  0xa1              HOTSWAP RTM
-#  9   Full     Temp    0xc0  0x62  27.0 C     ok     TEMP RTM1
-# 10   Full     Temp    0xc0  0x62  26.0 C     ok     TEMP RTM2
-# 11   Full     Temp    0xc0  0x62  30.5 C     ok     TEMP RTM3
-# 12   Compact  0xf0    0xc0  0x62  0x10              HS 091 RTM2
+#  -   MDevLoc          0xc0  0x62                    AFC v4.0-RTM
+# 24   Compact  0xf2    0xc0  0x62  0xa1              HOTSWAP RTM
+# 25   Full     Temp    0xc0  0x62  28.0 C     ok     Air In
+# 26   Full     Temp    0xc0  0x62  28.0 C     ok     Air Out
+# 27   Full     Temp    0xc0  0x62  31.0 C     ok     PS Block
+# 28   Full     Voltage 0xc0  0x62  3.700 V    ok     VS1
+# 29   Full     Voltage 0xc0  0x62  3.720 V    ok     VS2
+# 30   Full     Voltage 0xc0  0x62  -7.040 V   ok     N7V
+# 31   Full     Voltage 0xc0  0x62  7.080 V    ok     7V
+# 32   Full     Voltage 0xc0  0x62  2.480 V    ok     2V5
+# 33   Full     Voltage 0xc0  0x62  3.312 V    ok     3V3
+# 34   Full     Voltage 0xc0  0x62  5.024 V    ok     5V
+# 35   Full     Voltage 0xc0  0x62  12.416 V   ok     12V_HP
+# 36   Compact  0xf0    0xc0  0x62  0x10              HS 091 RTM2
 #------------------------------------------------------------------
 
 file "fru_common_alias.db"
@@ -23,8 +31,16 @@ file "fru_common_alias.db"
 
 file "sensor_ai_alias.db"
 {
-    pattern { attr    , sensinst, type, fruid   , aliasprefix , dev    }
-            { TempRTM1, 1       , 1   , $(fruid), alias_$(dev), $(dev) }
-            { TempRTM2, 2       , 1   , $(fruid), alias_$(dev), $(dev) }
-            { TempRTM3, 3       , 1   , $(fruid), alias_$(dev), $(dev) }
+    pattern { attr       , sensinst, type, fruid   , aliasprefix , dev    }
+            { TempAirIn  , 1       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempAirOut , 2       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { TempPSBlock, 3       , 1   , $(fruid), alias_$(dev), $(dev) }
+            { VoltVS1    , 1       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltVS2    , 2       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { VoltN7V    , 3       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt7V     , 4       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt2V5    , 5       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt3V3    , 6       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt5V     , 7       , 2   , $(fruid), alias_$(dev), $(dev) }
+            { Volt12V_HP , 8       , 2   , $(fruid), alias_$(dev), $(dev) }
 }
