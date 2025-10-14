@@ -363,9 +363,17 @@ RTM connected to AFCv4.0-FOFB (Slot 2).
 
 <details>
 <summary>sensors</summary>
-   TempRTM1{-Mon|Prs-Cte} <br>
-   TempRTM2{-Mon|Prs-Cte} <br>
-   TempRTM3{-Mon|Prs-Cte} <br>
+   TempAirIn{-Mon|Prs-Cte} <br>
+   TempAirOut{-Mon|Prs-Cte} <br>
+   TempPSBlock{-Mon|Prs-Cte} <br>
+   VoltVS1{-Mon|Prs-Cte} <br>
+   VoltVS2{-Mon|Prs-Cte} <br>
+   VoltN7V{-Mon|Prs-Cte} <br>
+   Volt7V{-Mon|Prs-Cte} <br>
+   Volt2V5{-Mon|Prs-Cte} <br>
+   Volt3V3{-Mon|Prs-Cte} <br>
+   Volt5V{-Mon|Prs-Cte} <br>
+   Volt12V_HP{-Mon|Prs-Cte} <br>
 <br>
 </details>
 
